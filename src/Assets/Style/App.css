@@ -1,32 +1,65 @@
-
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0;font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-.hero-image-one { background: linear-gradient(180.09deg, #F2F7FB 47.84%, rgba(242, 247, 251, 0) 99.92%); }
+.hero-image-one {
+  background: linear-gradient(
+    180.09deg,
+    #f2f7fb 47.84%,
+    rgba(242, 247, 251, 0) 99.92%
+  );
+}
 
 .hero-image-two {
   background-blend-mode: overlay;
   opacity: 60%;
-  color: #08006C
+  color: #08006c;
+}
+
+.anchor-with-icon::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background: url("/public//Images/Mail.svg") no-repeat center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -25%;
+  border-radius: 2px;
+}
+
+.anchor-with-icon.call::before {
+  background: url("/public//Images/DesktopCall.svg") no-repeat center;
+  left: -30%;
+}
+.instagram::before {
+  width: 29px;
+  height: 28px;
+  background: url("/public//Images/Instagram.svg") no-repeat center;
 }
 
 @tailwind base;
 .wrapper {
-  @apply max-w-[1440px] w-[90%] mx-auto
+  @apply max-w-[1440px] w-[90%] mx-auto;
 }
 
 .nav-list {
-  @apply font-[400] text-[20px] leading-[28px] text-center text-[#696969] py-2 w-full
+  @apply font-[400] text-[20px] leading-[28px] text-center text-[#696969] py-2 w-full;
 }
 .common {
-  @apply after:content-['\f078'] after:font-['FontAwesome'] after:text-[12px] after:text-[#696969] after:absolute after:top-[54%] after:translate-y-[-50%] after:right-[-21%]
+  @apply after:content-['\f078'] after:font-['FontAwesome'] after:text-[12px] after:text-[#696969] after:absolute after:top-[54%] after:translate-y-[-50%] after:right-[-21%];
+}
+
+.icon-common {
+  @apply relative indent-[-9999px] flex justify-center before:font-['FontAwesome'] before:absolute before:indent-0 before:block text-[18px]
 }
 
 .counter {
-  @apply before:content-[''] before:absolute before:w-[61px] before:h-[1px] before:bg-white before:top-[-9%] before:translate-y-[9%] before:left-[50%] before:translate-x-[-50%]
-} 
+  @apply before:content-[''] before:absolute before:w-[61px] before:h-[1px] before:bg-white before:top-[-9%] before:translate-y-[9%] before:left-[50%] before:translate-x-[-50%];
+}
 @tailwind components;
 @tailwind utilities;
