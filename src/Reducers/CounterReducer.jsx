@@ -20,7 +20,7 @@ import {
       case INCREMENT_EXPERIENCE_COUNT:
         return {
           ...state,
-          experienceCount: Math.min(state.experienceCount + 800, 3),
+          experienceCount: Math.floor(state.experienceCount + (800/200), 3).toFixed(2),
         };
       case INCREMENT_PROJECTS_COUNT:
         return {

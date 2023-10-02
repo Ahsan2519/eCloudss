@@ -114,14 +114,14 @@ const Home = () => {
             <h2 className="font-[700] text-[30px] leading-[64px] text-[#27307D] text-center mb-5">
               Testimonials
             </h2>
-            <ul className={`flex ${isDesktops ? 'justify-between items-start w-[88%] mx-auto' : ''}`}>
+            <ul className={`flex ${isDesktops ? 'justify-between items-stretch w-[88%] gap-[20px] mx-auto [&>*:nth-child(2)]:pt-1  [&>*:nth-child(2)]:pl[2%] [&>*:nth-child(3)]:pt-10' : ''}`}>
               {sliderDetails.map((val, idx) => {
                 return (
                   <li
                     key={idx}
                     className={`${
-                      isDesktops ? 'flex px-[1%] basis-[23%]': idx === index ? "flex" : "hidden w-[85%] mx-auto"
-                    } flex-col items-center  border-[1px] border-[#EFEFEF] px-[8%] pt-[30px] pb-[45px] rounded-[12px]`}
+                      isDesktops ? 'flex px-[1.4%] pt-3 basis-[22%] text-left': idx === index ? "flex" : "hidden w-[85%] mx-auto px-[8%] pt-[30px] pb-[45px]"
+                    } flex-col items-center  border-[1px] border-[#EFEFEF]  rounded-[12px]`}
                   >
                     <p className={`Slider ${isDesktops ? 'text-[16px] leading-[20px] text-[#6E7378]' : ''}`}>{isDesktops ? val.desktopDescription : val.mobileDiscription}</p>
                     <figure className="pb-6">

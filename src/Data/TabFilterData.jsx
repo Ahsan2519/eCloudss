@@ -7,31 +7,31 @@ export const TabFilterData = [
   },
   {
     url: "Images/Transaction.svg",
-    heading: "Transaction & Assurance",
+    heading: "Transaction Advisory Services",
     description:
       "Liquorice lemon drops powder chocolate liquorice candy dessert gummi bears. Caramels marzipan donut jujubes sweet roll. Powder croissant toffee shortbread chocolate sweet pie.",
   },
   {
     url: "Images/Cfo.svg",
-    heading: "CFO & Assurance",
+    heading: "Outsourced CFO solutions",
     description:
       "Liquorice lemon drops powder chocolate liquorice candy dessert gummi bears. Caramels marzipan donut jujubes sweet roll. Powder croissant toffee shortbread chocolate sweet pie.",
   },
   {
     url: "Images/Book.svg",
-    heading: "Book & Assurance",
+    heading: "Bookkeeping",
     description:
       "Liquorice lemon drops powder chocolate liquorice candy dessert gummi bears. Caramels marzipan donut jujubes sweet roll. Powder croissant toffee shortbread chocolate sweet pie.",
   },
   {
     url: "Images/Office.svg",
-    heading: "Office & Assurance",
+    heading: "Investment banking back office services",
     description:
       "Liquorice lemon drops powder chocolate liquorice candy dessert gummi bears. Caramels marzipan donut jujubes sweet roll. Powder croissant toffee shortbread chocolate sweet pie.",
   },
   {
     url: "Images/Advisory.svg",
-    heading: "Advisory & Assurance",
+    heading: "Advisory Services",
     description:
       "Liquorice lemon drops powder chocolate liquorice candy dessert gummi bears. Caramels marzipan donut jujubes sweet roll. Powder croissant toffee shortbread chocolate sweet pie.",
   },

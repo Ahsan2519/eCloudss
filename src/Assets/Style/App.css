@@ -113,8 +113,8 @@
 }
 
 .tab-list {
-  @apply relative before:absolute before:content-[''] before:w-[48px] before:h-[48px] before:top-[-24%] before:translate-y-[50%] before:left-[4%]
-}
+  @apply relative before:absolute before:content-[''] before:w-[48px] before:h-[48px] before:top-[-24%] before:translate-y-[50%] before:left-[4%] md:before:translate-y-0  md:before:left-[50%] md:before:translate-x-[-50%] md:before:top-[5%]
+} 
 
 @tailwind components;
 @tailwind utilities;
