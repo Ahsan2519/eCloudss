@@ -10,13 +10,18 @@ const Counter = () => {
   const { customerCount, experienceCount, projectsCount } = useSelector(
     (state) => state.counters
   );
+  const isDesktops = useSelector((state) => state.window.isDesktop);
 
   const dispatch = useDispatch();
 
   const animateCounters = () => {
-    dispatch(incrementCustomerCount());
-    dispatch(incrementExperienceCount());
-    dispatch(incrementProjectsCount());
+    let customerPayload = isDesktops ? 40000 : 136664;
+    let experiencePayload = isDesktops ? 50 : 3;
+    let projectsPayload = isDesktops ? 25 : 136664;
+  
+    dispatch(incrementCustomerCount(customerPayload));
+    dispatch(incrementExperienceCount(experiencePayload));
+    dispatch(incrementProjectsCount(projectsPayload));
   };
 
   useEffect(() => {
@@ -25,7 +30,7 @@ const Counter = () => {
     return () => {
       clearInterval(CounterInterval);
     };
-  }, []);
+  }, [isDesktops]);
 
   return (
     <section className="bg-[#27307D] pt-5 pb-[14px]">
@@ -38,7 +43,7 @@ const Counter = () => {
             </span>
           </li>
           <li className="mobile:basis-[35%] text-center">
-            <span className="block">{experienceCount}</span>
+            <span className="block">{`${experienceCount} Years +`}</span>
             <span className="block counter relative mt-[5px]">Experience</span>
           </li>
           <li className="mobile:basis-[30%] text-center">

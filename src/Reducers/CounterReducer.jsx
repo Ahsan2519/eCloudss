@@ -13,18 +13,26 @@ const initialState = {
 const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT_CUSTOMER_COUNT:
-    case INCREMENT_EXPERIENCE_COUNT:
-    case INCREMENT_PROJECTS_COUNT:
-      const customerIncrement = Math.min(state.customerCount + 136664 / 500, 136664);
-      const experienceIncrement = Math.min(state.experienceCount + 3 / 500, 3);
-      const projectsIncrement = Math.min(state.projectsCount + 136664 / 500, 136664);
-
+      const customerIncrement = Math.min(state.customerCount + action.payload / 500, action.payload);
       return {
         ...state,
         customerCount: parseFloat(customerIncrement.toFixed(2)),
+      };
+
+    case INCREMENT_EXPERIENCE_COUNT:
+      const experienceIncrement = Math.min(state.experienceCount + action.payload / 500, action.payload);
+      return {
+        ...state,
         experienceCount: parseFloat(experienceIncrement.toFixed(2)),
+      };
+
+    case INCREMENT_PROJECTS_COUNT:
+      const projectsIncrement = Math.min(state.projectsCount + action.payload / 500, action.payload);
+      return {
+        ...state,
         projectsCount: parseFloat(projectsIncrement.toFixed(2)),
       };
+
     default:
       return state;
   }
