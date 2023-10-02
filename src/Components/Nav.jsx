@@ -92,7 +92,7 @@ const Nav = () => {
             : ""
         }`}
       >
-        <div className="wrapper lg:w-[70%] md:w-[90%] 2xl:w-[40%]">
+        <div className="wrapper lg:w-[70%] md:w-[90%] 2xl:w-[45%]">
           <NavList
             isFooter={false}
             toggleHandler={toggleHandler}

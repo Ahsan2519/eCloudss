@@ -82,7 +82,7 @@
 }
 
 .nav-list {
-  @apply font-[400] text-[20px] leading-[28px] text-center text-[#696969] py-2 w-full;
+  @apply font-[400] text-[20px] leading-[28px] text-center text-[#696969] py-2 w-full lg:hover:text-[#27307D] transition-all ease-in-out duration-[.5s]
 }
 .common {
   @apply after:content-['\f078'] after:font-['FontAwesome'] after:text-[19px] after:text-[#696969] after:absolute after:top-[53%] after:translate-y-[-50%] after:right-[-33%];
@@ -116,5 +116,8 @@
   @apply relative before:absolute before:content-[''] before:w-[48px] before:h-[48px] before:top-[-24%] before:translate-y-[50%] before:left-[4%] md:before:translate-y-0  md:before:left-[50%] md:before:translate-x-[-50%] md:before:top-[5%]
 } 
 
+.active {
+  @apply text-[#27307D]
+}
 @tailwind components;
 @tailwind utilities;
