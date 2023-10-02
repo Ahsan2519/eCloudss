@@ -17,14 +17,10 @@ const App = () => {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (isMobile >= 768) {
-      setIsDesktop(true);
-      dispatch(desktopWidth(isDesktop));
-    } else {
-      setIsDesktop(false);
-      dispatch(desktopWidth(isDesktop));
-    }
+    setIsDesktop(isMobile >= 768 ? true : false);
+    dispatch(desktopWidth(isDesktop));
   }, [isMobile, isDesktop]);
+
   useEffect(() => {
     const handleResize = () => {
       const newWidth = window.innerWidth;

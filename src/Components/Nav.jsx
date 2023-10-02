@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import MobileNav from "./MobileNav";
+import MobileNav from "./UI/MobileNav";
+import NavList from "./UI/NavList";
 const Nav = () => {
   const [active, setActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -83,83 +84,20 @@ const Nav = () => {
         )}
       </div>
       <nav
-        className={`shadow-[2px_1px_7px_2px_rgba(0,0,0,0.1)] py-6 bg-white ${
-          active ? "left-0" : "left-[-100%]"
+        className={`md:shadow-[2px_1px_7px_2px_rgba(0,0,0,0.1)] py-6 bg-white ${
+          active ? "top-[67px]" : "top-[-100%]"
         } md:py-[9px] ${
           !isDesktops
-            ? "absolute w-full top-[69px] z-10 overflow-hidden transition-all duration-[.3s]"
+            ? "absolute w-full left-0 z-10 overflow-hidden transition-all ease-in-out duration-[.8s]"
             : ""
         }`}
       >
         <div className="wrapper lg:w-[70%] md:w-[90%] 2xl:w-[40%]">
-          <ul
-            className={`flex items-center gap-2 md:gap-0 ${
-              !isDesktops ? "flex-col" : ""
-            }`}
-          >
-            <li className="nav-list">
-              <Link to={"/"} title="Home">
-                Home
-              </Link>
-            </li>
-            <li
-              className="nav-list transition-all duration-[.3s] relative"
-              onClick={() => toggleHandler("dropdown")}
-            >
-              <a
-                href="#FIXME"
-                title="Service"
-                className={`common nav-list relative`}
-              >
-                Service
-              </a>
-              <ul
-                className={`justify-center mx-auto rounded-[10px] bg-white shadow-[0_10px_25px_rgba(0,0,0,0.1)] flex-col flex overflow-hidden transition-all mt-1 duration-[.3s] ${
-                  isOpen ? "h-auto" : "h-0"
-                } ${
-                  isDesktops
-                    ? "absolute top-[70%] z-[5] w-full left-[19%]"
-                    : "w-[30%]"
-                }`}
-              >
-                <li className={`py-2`}>
-                  <Link to={"/Service"} title="Service" className="nav-list">
-                    Services
-                  </Link>
-                </li>
-                <li className={`py-2`}>
-                  <Link to={"/Service"} title="Service" className="nav-list">
-                    Services
-                  </Link>
-                </li>
-                <li className={`py-2`}>
-                  <Link to={"/Service"} title="Service" className="nav-list">
-                    Services
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-list">
-              <Link to={"/CaseStudy"} title="Case Study">
-                Case Study
-              </Link>
-            </li>
-            <li className="nav-list">
-              <Link to={"/About"} title="About Us">
-                About Us
-              </Link>
-            </li>
-            <li className="nav-list">
-              <Link to={"/Blog"} title="Blog">
-                Blog
-              </Link>
-            </li>
-            <li className="nav-list">
-              <Link to={"/Contact"} title="Contact">
-                Contact
-              </Link>
-            </li>
-          </ul>
+          <NavList
+            isFooter={false}
+            toggleHandler={toggleHandler}
+            isOpen={isOpen}
+          />
         </div>
       </nav>
     </header>

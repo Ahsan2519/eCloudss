@@ -40,7 +40,41 @@
   width: 29px;
   height: 28px;
   background: url("/public//Images/Instagram.svg") no-repeat center;
+  background-blend-mode: overlay;
 }
+
+.background {
+  background-image: url('/public//Images/About.svg'), linear-gradient(to bottom, #0C4CE4, #27307D);
+  background-blend-mode: overlay
+}
+
+.fed-in-left {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.test::before {
+  background: url("/public//Images/Ellipse.svg") no-repeat center;
+}
+
+.icon1::before { background: url('/public//Images/Cost.svg') no-repeat center; }
+.icon2::before { background: url('/public//Images/Integrity.svg') no-repeat center; }
+.icon3::before { background: url('/public//Images/professional.svg') no-repeat center; }
+.icon5::before { background: url('/public//Images/Quality.svg') no-repeat center; }
+.icon6::before { background: url('/public//Images/Accountability.svg') no-repeat center; }
+.icon7::before { background: url('/public//Images/Confidential.svg') no-repeat center; }
+.icon8::before { background: url('/public//Images/Focus.svg') no-repeat center; }
+.tab-filter1::before { background: url('/public//Images/Tab1.svg') no-repeat center; }
+.tab-filter2::before { background: url('/public//Images/TabIcon2.svg') no-repeat center; }
+.tab-filter3::before { background: url('/public//Images/TabIcon3.svg') no-repeat center; }
 
 @tailwind base;
 .wrapper {
@@ -61,5 +95,26 @@
 .counter {
   @apply before:content-[''] before:absolute before:w-[61px] before:h-[1px] before:bg-white before:top-[-9%] before:translate-y-[9%] before:left-[50%] before:translate-x-[-50%];
 }
+
+.footer-nav-list {
+  @apply font-[500] text-[14px] leading-[22px] text-black basis-[27%] text-center
+}
+
+.Slider {
+  @apply font-[400] text-[14px] leading-[20px] text-center text-[#696969] pb-8
+}
+
+.list-befor{
+  @apply relative mt-[85px] before:block before:absolute before:top-[-67px] before:left-[50%] before:translate-x-[-50%] before:w-[67px] before:h-[67px]
+}
+
+.list-after {
+  @apply relative after:content-[''] after:absolute after:w-[44px] after:h-[2px] after:bg-[#27307D1F] after:bottom-[-6px] after:left-[50%] after:translate-x-[-50%]
+}
+
+.tab-list {
+  @apply relative before:absolute before:content-[''] before:w-[48px] before:h-[48px] before:top-[-24%] before:translate-y-[50%] before:left-[4%]
+}
+
 @tailwind components;
 @tailwind utilities;

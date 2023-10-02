@@ -1,5 +1,10 @@
 import { combineReducers } from "redux";
 import { SET_WIDTH, SET_DESKTOP } from "../Actions/ResponsiveAction";
+import sliderReducer from "./SliderReducer";
+import counterReducer from "./CounterReducer";
+import TabFilterReducer from "./TabFilterReducer";
+
+
 
 const initialState = {
   windowWidth: window.innerWidth,
@@ -25,6 +30,9 @@ const windowReducer = (state = initialState, action) => {
 
 const rootReducer = combineReducers({
   window: windowReducer,
+  slider: sliderReducer,
+  counters: counterReducer,
+  tabFilter: TabFilterReducer,
 });
 
 export default rootReducer;
