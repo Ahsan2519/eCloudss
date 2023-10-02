@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const ContentImage = ({
@@ -10,33 +11,45 @@ const ContentImage = ({
   isHero,
   children,
 }) => {
+  const isDesktops = useSelector((state) => state.window.isDesktop);
   return (
     <section
       className={`${
-        isHero
+        isHero 
           ? "relative hero-image-one py-[40px]"
           : children ? 'bg-[#2929670D] py-[85px]' : `bg-cover bg-no-repeat opacity-[55%]  ${
               title === "Know More" ? "py-8" : "pt-[32px]"
             }  background`
       } `}
     >
-      <div className="wrapper">
-        <div>
+      {/* {isDesktops && isHero &&  (
+        <>
+          <figure className="absolute top-0 hero-image-one">
+            <img src="Images/Bg.svg" alt="Hero Image" />
+          </figure>
+          <figure className="absolute top-0 hero-image-two">
+            <img src="Images/BgTwo.svg" alt="Hero Image" />
+          </figure>
+        </>
+      )} */}
+
+      <div className={`wrapper ${isDesktops && isHero ? 'flex justify-between items-center' : ''}`}>
+        <div className={`${isDesktops && isHero ? 'basis-[44%]': ''}`}>
           <h2
             className={`${
               isHero || children
-                ? "text-[#27307D] font-[700] text-[30px] leading-[34px]"
+                ? "text-[#27307D] font-[700] text-[30px] md:text-[52px] md:leading-[64px] leading-[34px]"
                 : `font-[700] text-[30px] text-center text-white  px-[20%] mb-5 ${
                     title === "Know More" ? "leading-[34px]" : "leading-[42px]"
                   }`
             }`}
           >
-            {heading} {isHero && <span className="relative z-[4] before:content-[''] before:w-[189px] before:h-[14px]  before:absolute before:z-0 before:top-0  test">Accounting</span>}
+            {heading} {isHero && !isDesktops && <span>Accounting</span>}
           </h2>
           <p
             className={`${
               isHero || children
-                ? "font-[400] text-[14px] leading-[21px] text-[#696969] pr-[10%] mt-[15px]"
+                ? `font-[400] text-[14px] leading-[21px] text-[#696969] pr-[10%] mt-[15px] ${isDesktops ? 'text-[20px] leading-[28px]': ''}`
                 : "font-[400] text-[14px] leading-[21px] text-center text-white px-[20%]"
             }`}
           >
@@ -59,8 +72,8 @@ const ContentImage = ({
             {title}
           </Link>
         </div>
-        <figure>
-          <img src={imagePath} alt={altMsg} className="w-full" />
+        <figure className={`${isDesktops && isHero ? 'basis-[48%] max-h-[578px] h-full': ''}`}>
+          <img src={imagePath} alt={altMsg} className="w-full h-full" />
         </figure>
       </div>
     </section>

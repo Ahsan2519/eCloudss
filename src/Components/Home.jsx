@@ -51,9 +51,9 @@ const Home = () => {
         </div>
       </section> */}
         <ContentImage
-          heading={"Focus on Your Business Let us do the"}
+          heading={!isDesktops ? 'Focus on Your Business Let us do the' : 'Where accuracy meets trusted financial solutions! '}
           description={
-            'We are great with numbers, our team works for YOU Leave your back-office with the "Affordable-Experts"'
+            !isDesktops ? 'We are great with numbers, our team works for YOU Leave your back-office with the "Affordable-Experts"' : 'Unlock the Power of Offshore staffing and support with eCloudacc professionals. Partner with our expert team, specializing in offshore services for CPA, ACCA firms, and financial institutions. We provide essential backend solutions in all financial domains, including TAS, Audit, Bookkeeping, CFO Office, and Investment, to supercharge your operations. '
           }
           path={"/Contact"}
           title={"Contact Us"}
@@ -114,22 +114,24 @@ const Home = () => {
             <h2 className="font-[700] text-[30px] leading-[64px] text-[#27307D] text-center mb-5">
               Testimonials
             </h2>
-            <ul className="flex">
+            <ul className={`flex ${isDesktops ? 'justify-between items-start w-[88%] mx-auto' : ''}`}>
               {sliderDetails.map((val, idx) => {
                 return (
                   <li
                     key={idx}
                     className={`${
-                      isDesktops ? 'flex': idx === index ? "flex" : "hidden"
-                    } flex-col items-center w-[85%] mx-auto border-[1px] border-[#EFEFEF] px-[8%] pt-[30px] pb-[45px] rounded-[12px]`}
+                      isDesktops ? 'flex px-[1%] basis-[23%]': idx === index ? "flex" : "hidden w-[85%] mx-auto"
+                    } flex-col items-center  border-[1px] border-[#EFEFEF] px-[8%] pt-[30px] pb-[45px] rounded-[12px]`}
                   >
-                    <p className="Slider">{val.discription}</p>
+                    <p className={`Slider ${isDesktops ? 'text-[16px] leading-[20px] text-[#6E7378]' : ''}`}>{isDesktops ? val.desktopDescription : val.mobileDiscription}</p>
                     <figure className="pb-6">
                       <img src={val.url} alt={val.title} />
                     </figure>
-                    <h3 className="font-[700] text-[16px] leading-[22px] text-black">
+                    {
+                      !isDesktops && <h3 className="font-[700] text-[16px] leading-[22px] text-black">
                       {val.title}
                     </h3>
+                    }
                     <p className="font-[400] text-[12px] leading-[24px] text-[#BABABA] pt-2">
                       {val.role}
                     </p>

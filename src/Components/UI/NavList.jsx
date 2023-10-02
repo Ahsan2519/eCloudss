@@ -1,8 +1,10 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Footer from "../Footer";
+import { useSelector } from "react-redux";
 
 const NavList = ({ isFooter, toggleHandler, isOpen }) => {
+  const isDesktops = useSelector((state) => state.window.isDesktop);
   return (
     <ul
       className={`${
@@ -11,7 +13,7 @@ const NavList = ({ isFooter, toggleHandler, isOpen }) => {
           : "flex items-center gap-2 md:gap-0 flex-col md:flex-row"
       }`}
     >
-      <li className={`${!isFooter ? "nav-list" : "footer-nav-list"}`}>
+      <li className={`${!isFooter ? "nav-list" : `footer-nav-list ${isDesktops ? 'basis-[13%] font-[500] text-[24px] leading-[24px] text-[#27307D]' : ''}`}`}>
         {!isFooter ? (
           <Link to={"/"} title="Home">
             Home
@@ -26,7 +28,7 @@ const NavList = ({ isFooter, toggleHandler, isOpen }) => {
         className={`${
           !isFooter
             ? "nav-list transition-all ease-in-out duration-[.3s] relative"
-            : "footer-nav-list"
+            : `footer-nav-list ${isDesktops ? 'basis-[13%] font-[500] text-[24px] leading-[24px] text-[#27307D]' : ''}`
         }`}
         onClick={!isFooter ? () => toggleHandler("dropdown") : undefined}
       >
@@ -68,38 +70,38 @@ const NavList = ({ isFooter, toggleHandler, isOpen }) => {
         )}
       </li>
       {!isFooter ? (
-        <li className={`${!isFooter ? "nav-list" : "footer-nav-list"}`}>
+        <li className={`${!isFooter ? "nav-list" : ''}`}>
           <Link to={"/CaseStudy"} title="Case Study">
             Case Study
           </Link>
         </li>
       ) : (
-        <li className={`${!isFooter ? "nav-list" : "footer-nav-list"}`}>
+        <li className={`${!isFooter ? "nav-list" : `footer-nav-list ${isDesktops ? 'basis-[13%] font-[500] text-[24px] leading-[24px] text-[#27307D]' : ''}`}`}>
           <Link to={"/Contact"} title="Contact">
             Contact Us
           </Link>
         </li>
       )}
       {!Footer && (
-        <li className={`${!isFooter ? "nav-list" : "footer-nav-list"}`}>
+        <li className={`${!isFooter ? "nav-list" : ''}`}>
           <Link to={"/About"} title="About Us">
             About Us
           </Link>
         </li>
       )}
-      <li className={`${!isFooter ? "nav-list" : "footer-nav-list"}`}>
+      <li className={`${!isFooter ? "nav-list" : `footer-nav-list ${isDesktops ? 'basis-[13%] font-[500] text-[24px] leading-[24px] text-[#27307D]' : ''}`}`}>
         <Link to={"/Blog"} title="Blog">
           Blog
         </Link>
       </li>
       {!isFooter ? (
-        <li className={`${!isFooter ? "nav-list" : "footer-nav-list"}`}>
+        <li className={`${!isFooter ? "nav-list" : ''}`}>
           <Link to={"/Contact"} title="Contact">
             Contact
           </Link>
         </li>
       ) : (
-        <Link to={"/CaseStudy"} title="Case Study">
+        <Link to={"/CaseStudy"} title="Case Study" className={`footer-nav-list ${isDesktops ? 'basis-[13%] font-[500] text-[24px] leading-[24px] text-[#27307D]' : ''}`}>
           Case Study
         </Link>
       )}

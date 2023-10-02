@@ -85,11 +85,11 @@
   @apply font-[400] text-[20px] leading-[28px] text-center text-[#696969] py-2 w-full;
 }
 .common {
-  @apply after:content-['\f078'] after:font-['FontAwesome'] after:text-[12px] after:text-[#696969] after:absolute after:top-[54%] after:translate-y-[-50%] after:right-[-21%];
+  @apply after:content-['\f078'] after:font-['FontAwesome'] after:text-[19px] after:text-[#696969] after:absolute after:top-[53%] after:translate-y-[-50%] after:right-[-33%];
 }
 
 .icon-common {
-  @apply relative indent-[-9999px] flex justify-center before:font-['FontAwesome'] before:absolute before:indent-0 before:block text-[18px]
+  @apply relative indent-[-9999px] flex justify-center before:font-['FontAwesome'] before:absolute before:indent-0 before:block text-[18px] before:text-[#27307D]
 }
 
 .counter {
