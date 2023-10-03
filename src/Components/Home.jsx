@@ -81,9 +81,9 @@ const Home = () => {
           <TabFilter />
         </section>
         <ContentImage
-          heading={"What we believe in..."}
+          heading={!isDesktops ? "What we believe in..." : 'Serving beyond boundaries...'}
           description={
-            "Our aim is to use our unique experiences and expertise gained over a period of time with our own insights derived from the experience. We are passionate about supporting our clients in achieving their business goals and targets. Using these invaluable insights, we want to deliver quality solutions to increase our client’s productivity.."
+            !isDesktops ? "Our aim is to use our unique experiences and expertise gained over a period of time with our own insights derived from the experience. We are passionate about supporting our clients in achieving their business goals and targets. Using these invaluable insights, we want to deliver quality solutions to increase our client’s productivity.." : 'In the vast landscape of financial requirements, eCloudacc distinguishes itself as a unified, cost-effective platform. Seamlessly integrating services across niches, offering global assurance, TAS, Bookkeeping, and CFO outsourcing. With a skilled team boasting Big 4, CPA and ACCA experienced, we offer comprehensive solutions and robust back-office support. We have a track record of 40,000+ dedicated hours to clients in numerous countries, including the USA, UK, and Canada. '
           }
           path={"/About"}
           title={"KNOW MORE ABOUT US"}
@@ -91,27 +91,27 @@ const Home = () => {
           altMsg={"Know More"}
           isHero={false}
         >
-          <div>
-            <div>
+          <div className="md:flex justify-between items-center">
+            <div className="basis-[45%]">
               <h3 className="text-[#27307D] font-[600] text-[24px] leading-[34px] mt-10">
                 Our Mission
               </h3>
-              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] mt-[10px]">
-                Our mission is simple enough. To unearth the magic behind the
+              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] mt-[10px] md:pr-[35%]">
+                {!isDesktops ? `Our mission is simple enough. To unearth the magic behind the
                 numbers of organizations big and small using ratio analysis and
                 make meaningful decisions to boost up their performance. Our
-                passion drives us forward.
+                passion drives us forward.` : `Our company's mission is to unify services on a single platform, offering specialized financial support in a specific niche. Backed by Big4 talent and industry leaders, we strive to provide exceptional services to global accounting firms, CPA firms, ACCA firms, investment banks, and financial companies. `}
               </p>
             </div>
-            <div>
+            <div className="basis-[45%]">
               <h3 className="text-[#27307D] font-[600] text-[24px] leading-[34px] mt-10">
                 Our Vision
               </h3>
-              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] mt-[10px]">
-                Our vision is to utilize the resources with accurate workable
+              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] mt-[10px] md:pr-[35%]">
+                {!isDesktops ? `Our vision is to utilize the resources with accurate workable
                 plans that deliver results. We know resources are scarce and the
                 only way we can maximize efficiency is to employ better methods
-                of production and execution.
+                of production and execution.` : `We aim to be the foremost and most reliable choice for global accounting firms, CPA firms, ACCA firms, investment banks, and financial companies, prioritizing client satisfaction. Our dedication lies in achieving exceptional outcomes for our clients and building enduring connections with stakeholders worldwide. `}
               </p>
             </div>
           </div>
@@ -182,7 +182,7 @@ const Home = () => {
               })}
             </ul>
             {!isDesktops && (
-              <div className="absolute top-[60%] translate-y-[-50%] w-[85%] left-[7.2%] flex justify-between items-center">
+              <div className="absolute top-[60%] translate-y-[-50%] w-[100%] left-[0%] flex justify-between items-center">
                 <span
                   title="Prev"
                   className="icon-common before:content-['\f104'] before:w-[32px] before:h-[32px] before:border-[1px] before:border-[#F6C648] before:rounded-[50%] before:flex before:justify-center before:items-center cursor-pointer"

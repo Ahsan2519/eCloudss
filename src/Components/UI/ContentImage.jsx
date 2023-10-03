@@ -33,8 +33,8 @@ const ContentImage = ({
         </>
       )} */}
 
-      <div className={`wrapper md:flex md:justify-between md:items-center ${isDesktops && isHero ? 'flex justify-between items-center' : ''}`}>
-        <div className={`${isDesktops && isHero ? 'basis-[46%]': `${children ? '' : `basis-[50%] ${title === 'Know More' ? 'mt-[25px]' : ''}`}`}`}>
+      <div className={`wrapper md:flex md:justify-between ${isDesktops && isHero ? 'flex justify-between items-center' : `${children ? 'md:items-start' : 'md:items-center'}`}`}>
+        <div className={`${isDesktops && isHero ? 'basis-[46%]': `${children ? 'basis-[55%]' : `basis-[50%] ${title === 'Know More' ? 'mt-[25px]' : ''}`}`}`}>
           <h2
             className={`${
               isHero || children
@@ -62,7 +62,7 @@ const ContentImage = ({
             className={` ${
               isHero
                 ? "bg-[#27307D] text-white text-center py-[18px] px-[10%] font-[600] text-[14px] leading-[17px] mt-[30px] inline-block rounded-[4px] uppercase mb-[60px]"
-                : children ? 'font-[600] text-[14px] leading-[17px] text-center text-[#27307D] border-[1px] rounded-[4px] border-[#27307D] py-4 px-[5%] inline-block mt-5 mb-11' : `font-[600] text-[14px] leading-[17px] text-center w-[65%] mobile:w-[50%] mx-auto block rounded-[4px] border-2 border-[#F6C648] py-[18px] mobile:py-[22px] mt-6 mb-[95px]  ${
+                : children ? 'font-[600] text-[14px] leading-[17px] text-center text-[#27307D] border-[1px] rounded-[4px] border-[#27307D] py-4 px-[5%] inline-block mt-5 mb-11 md:text-[16px] md:leading-[19px] md:py-3 md:px-[3%] lg:hover:text-white lg:hover:bg-[#27307D] transition-all ease-in-out duration-[.5s]' : `font-[600] text-[14px] leading-[17px] text-center w-[65%] mobile:w-[50%] mx-auto block rounded-[4px] border-2 border-[#F6C648] py-[18px] mobile:py-[22px] mt-6 mb-[95px]  ${
                     title === "Know More"
                       ? "text-[#F6C648] bg-transparent md:py-[6px] md:w-[21%] md:mx-0 lg:hover:text-[#27307D] lg:hover:bg-[#F6C648] transition-all ease-in-out duration-[.5s] md:mb-0"
                       : "bg-[#F6C648] text-[#27307D] shadow-[0px_4px_4px_0px_rgba(0,121,191,0.16)] md:w-[22%] md:mx-0 md:mb-0 md:py-[13px] lg:hover:text-[#F6C648] lg:hover:bg-[#27307D] transition-all ease-in-out duration-[.5s]"
@@ -72,7 +72,7 @@ const ContentImage = ({
             {title}
           </Link>
         </div>
-        <figure className={`${isDesktops && isHero ? 'basis-[48%]': `${children ? '' : 'basis-[40%]'}`}`}>
+        <figure className={`${isDesktops && isHero ? 'basis-[48%]': `${children ? 'basis-[40%]' : 'basis-[40%]'}`}`}>
           <img src={imagePath} alt={altMsg} className="w-full" />
         </figure>
       </div>
