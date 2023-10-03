@@ -48,12 +48,11 @@ const TabFilter = () => {
           </p>
           <ul className="flex flex-col md:flex-row md:justify-between  md:mr-[40%] xl:w-[55%] lg:w-[75%] md:w-[90%]">
             <li className={`text-center bg-[#E9EAF2] mb-3 py-[34px] rounded-[16px] font-[500] text-[16px] leading-[21px] text-black ${isDesktops ? 'tab-filter1 tab-desk-1' : 'tab-filter1'} tab-list md:basis-[30%] md:pt-[95px] md:pb-[18px]`}>
-              Charting the Meeting
-              {!isDesktops && (
+              {!isDesktops ? (
                 <span className="absolute top-[50%%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                   Schedule Your<span className="block">Consultation</span>
                 </span>
-              )}
+              ) : 'Charting the Meeting'}
             </li>
             <li className={`text-center bg-[#E9EAF2] mb-3 py-6 rounded-[16px] font-[500] text-[16px] leading-[21px] text-black ${isDesktops ? 'tab-filter2 tab-desk-2' : 'tab-filter1'} tab-list md:basis-[30%] md:pt-[95px] md:pb-[18px]`}>
               {!isDesktops ? "Financial Analysis" : "Financial Analysis"}
