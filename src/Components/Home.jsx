@@ -151,8 +151,8 @@ const Home = () => {
                       isDesktops
                         ? "flex px-[1.4%] pt-3 basis-[22%] text-left"
                         : idx === index
-                        ? "flex"
-                        : "hidden w-[85%] mx-auto px-[8%] pt-[30px] pb-[45px]"
+                        ? "flex w-[85%] mx-auto px-[8%] pt-[30px] pb-[45px]"
+                        : "hidden "
                     } flex-col items-center  border-[1px] border-[#EFEFEF]  rounded-[12px]`}
                   >
                     <p
@@ -182,7 +182,7 @@ const Home = () => {
               })}
             </ul>
             {!isDesktops && (
-              <div className="absolute top-[60%] translate-y-[-50%] w-[100%] left-[0%] flex justify-between items-center">
+              <div className="absolute top-[60%] translate-y-[-50%] w-[85%] left-[7.2%] flex justify-between items-center">
                 <span
                   title="Prev"
                   className="icon-common before:content-['\f104'] before:w-[32px] before:h-[32px] before:border-[1px] before:border-[#F6C648] before:rounded-[50%] before:flex before:justify-center before:items-center cursor-pointer"
