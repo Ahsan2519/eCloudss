@@ -32,7 +32,7 @@ const Nav = () => {
                   <a
                     href="mailto:info@mail.com"
                     title="info@mail.com"
-                    className="uppercase font-[400] text-[12px] leading-[18px] text-[#646467] relative anchor-with-icon"
+                    className="uppercase font-[400] text-[12px] leading-[18px] text-[#646467] relative anchor-with-icon lg:hover:text-[#00008B] transition-all ease-in-out duration-[.5s]"
                   >
                     info@mail.com
                   </a>
@@ -41,19 +41,19 @@ const Nav = () => {
                   <a
                     href="tel:964-622-3903"
                     title="964-622-3903"
-                    className="font-[400] text-[12px] leading-[18px] text-[#646467] anchor-with-icon call relative"
+                    className="font-[400] text-[12px] leading-[18px] text-[#646467] anchor-with-icon call relative lg:hover:text-[#00008B] transition-all ease-in-out duration-[.5s]  "
                   >
                     964-622-3903
                   </a>
                 </li>
               </ul>
-              <ul className="flex 2xl:basis-[12%] xl:basis-[15%] lg:basis-[18%] md:basis-[22%] ">
+              <ul className="flex 2xl:basis-[12%] xl:basis-[15%] lg:basis-[18%] md:basis-[22%]">
                 <li className="basis-[28%]">
                   <a
                     href="#FIXME"
                     title="Twiter"
                     target="_blank"
-                    className="icon-common before:content-['\f099'] "
+                    className="icon-common before:content-['\f099'] lg:hover:before:text-[#696969] transition-all ease-in-out duration-[.5s] "
                   >
                     Twitter
                   </a>
@@ -63,7 +63,7 @@ const Nav = () => {
                     href="#FIXME"
                     title="Facebook"
                     target="_blank"
-                    className="icon-common before:content-['\f39e']"
+                    className="icon-common before:content-['\f39e'] lg:hover:before:text-[#696969] transition-all ease-in-out duration-[.5s]"
                   >
                     Facebook
                   </a>
@@ -73,7 +73,7 @@ const Nav = () => {
                     href="#FIXME"
                     title="Instagram"
                     target="_blank"
-                    className="icon-common instagram before:content-['']"
+                    className="icon-common instagram before:content-[''] lg:hover:before:text-[#696969] transition-all ease-in-out duration-[.5s]" 
                   >
                     Instagram
                   </a>

@@ -75,6 +75,7 @@
 .tab-filter1::before { background: url('/public//Images/Tab1.svg') no-repeat center; }
 .tab-filter2::before { background: url('/public//Images/TabIcon2.svg') no-repeat center; }
 .tab-filter3::before { background: url('/public//Images/TabIcon3.svg') no-repeat center; }
+.background.desktop-bg { background: url('/public//Images/DesktopBg.svg') , linear-gradient(to bottom, #0C4CE4, #27307D); }
 
 @tailwind base;
 .wrapper {
@@ -97,7 +98,7 @@
 }
 
 .footer-nav-list {
-  @apply font-[500] text-[14px] leading-[22px] text-black basis-[27%] text-center
+  @apply font-[500] text-[14px] leading-[22px] text-black basis-[27%] text-center lg:hover:opacity-[75%] transition-all ease-in-out duration-[.5s]
 }
 
 .Slider {

@@ -10,6 +10,7 @@ import Blog from "./Blog";
 import { useDispatch, useSelector } from "react-redux";
 import Nav from "./Nav";
 import { desktopWidth, setWindowWidth } from "../Actions/ResponsiveAction";
+import Footer from "./Footer";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -42,6 +43,7 @@ const App = () => {
         <Route exact path="/Blog" element={<Blog />} />
         <Route exact path="/Contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
