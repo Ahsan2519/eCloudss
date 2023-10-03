@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TabFilterData } from "../../Data/TabFilterData";
 import { useDispatch, useSelector } from "react-redux";
 import { setActiveTab } from "../../Actions/TabFilterAction";
@@ -7,15 +7,19 @@ const TabFilter = () => {
   const activeTab = useSelector((state) => state.tabFilter.activeTab);
   const dispatch = useDispatch();
   const isDesktops = useSelector((state) => state.window.isDesktop);
-  const [active, setActive] = useState(false);
+  const [animationActive, setAnimationActive] = useState(false);
+
   const handleTabClick = (index) => {
     dispatch(setActiveTab(index));
-    setActive(true);
-    setTimeout(() => {
-      setActive(false);
-    }, 1500);
+    setAnimationActive(true);
   };
 
+  const handleAnimationEnd = () => {
+    setAnimationActive(false);
+  };
+  useEffect(() => {
+    setAnimationActive(true);
+  }, []);
   return (
     <>
       <ul className="wrapper flex justify-between">
@@ -36,7 +40,10 @@ const TabFilter = () => {
           </li>
         ))}
       </ul>
-      <div className={`bg-white ${active ? "fed-in-left" : ""}`}>
+      <div
+        className={`bg-white ${animationActive ? "fed-in-left" : ""}`}
+        onAnimationEnd={handleAnimationEnd}
+      >
         <div className={`wrapper pt-[45px] pb-[35px] `}>
           <h3 className="font-[600] text-[16px] leading-[26px] text-black mb-2 md:text-[32px] md:leading-[34px]">
             {TabFilterData[activeTab].heading}
@@ -47,17 +54,31 @@ const TabFilter = () => {
               : "Ensuring compliance, identifying potential risks and providing invaluable insights to guide your strategic decisions and improve operational efficiency."}
           </p>
           <ul className="flex flex-col md:flex-row md:justify-between  md:mr-[40%] xl:w-[55%] lg:w-[75%] md:w-[90%]">
-            <li className={`text-center bg-[#E9EAF2] mb-3 py-[34px] rounded-[16px] font-[500] text-[16px] leading-[21px] text-black ${isDesktops ? 'tab-filter1 tab-desk-1' : 'tab-filter1'} tab-list md:basis-[30%] md:pt-[95px] md:pb-[18px]`}>
+            <li
+              className={`text-center bg-[#E9EAF2] mb-3 py-[34px] rounded-[16px] font-[500] text-[16px] leading-[21px] text-black ${
+                isDesktops ? "tab-filter1 tab-desk-1" : "tab-filter1"
+              } tab-list md:basis-[30%] md:pt-[95px] md:pb-[18px]`}
+            >
               {!isDesktops ? (
                 <span className="absolute top-[50%%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                   Schedule Your<span className="block">Consultation</span>
                 </span>
-              ) : 'Charting the Meeting'}
+              ) : (
+                "Charting the Meeting"
+              )}
             </li>
-            <li className={`text-center bg-[#E9EAF2] mb-3 py-6 rounded-[16px] font-[500] text-[16px] leading-[21px] text-black ${isDesktops ? 'tab-filter2 tab-desk-2' : 'tab-filter1'} tab-list md:basis-[30%] md:pt-[95px] md:pb-[18px]`}>
+            <li
+              className={`text-center bg-[#E9EAF2] mb-3 py-6 rounded-[16px] font-[500] text-[16px] leading-[21px] text-black ${
+                isDesktops ? "tab-filter2 tab-desk-2" : "tab-filter1"
+              } tab-list md:basis-[30%] md:pt-[95px] md:pb-[18px]`}
+            >
               {!isDesktops ? "Financial Analysis" : "Financial Analysis"}
             </li>
-            <li className={`text-center bg-[#E9EAF2] mb-3 py-6 rounded-[16px] font-[500] text-[16px] leading-[21px] text-black ${isDesktops ? 'tab-filter3 tab-desk-3' : 'tab-filter3'} tab-list md:basis-[30%] md:pt-[95px] md:pb-[18px]`}>
+            <li
+              className={`text-center bg-[#E9EAF2] mb-3 py-6 rounded-[16px] font-[500] text-[16px] leading-[21px] text-black ${
+                isDesktops ? "tab-filter3 tab-desk-3" : "tab-filter3"
+              } tab-list md:basis-[30%] md:pt-[95px] md:pb-[18px]`}
+            >
               Customized Solutions
             </li>
           </ul>
