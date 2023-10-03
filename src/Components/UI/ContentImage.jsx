@@ -16,13 +16,13 @@ const ContentImage = ({
     <section
       className={`${
         isHero 
-          ? "relative hero-image-one py-[40px] md:pt-[65px] md:pb-[175px]"
+          ? "relative hero-image-one py-[40px] md:pt-[50px] tab:pt-[65px] md:pb-[100px] md:overflow-hidden"
           : children ? 'bg-[#2929670D] py-[85px]' : `bg-cover bg-no-repeat opacity-[55%] ${isDesktops ? 'background desktop-bg' : 'background'} ${
               title === "Know More" ? "py-8" : "pt-[32px] md:pb-0"
             }`
       } `}
     >
-      {/* {isDesktops && isHero &&  (
+      {isDesktops && isHero &&  (
         <>
           <figure className="absolute top-0 hero-image-one">
             <img src="Images/Bg.svg" alt="Hero Image" />
@@ -31,10 +31,10 @@ const ContentImage = ({
             <img src="Images/BgTwo.svg" alt="Hero Image" />
           </figure>
         </>
-      )} */}
+      )}
 
-      <div className={`wrapper md:flex md:justify-between ${isDesktops && isHero ? 'flex justify-between items-center' : `${children ? 'md:items-start' : 'md:items-center'}`}`}>
-        <div className={`${isDesktops && isHero ? 'basis-[46%]': `${children ? 'basis-[55%]' : `basis-[50%] ${title === 'Know More' ? 'mt-[25px]' : ''}`}`}`}>
+      <div className={`wrapper lg:flex md:justify-between ${isDesktops && isHero ? 'flex flex-col tab:flex-row justify-between items-center md:relative md:z-50 md:items-stretch' : `${children ? 'md:items-start' : 'md:items-center'}`}`}>
+        <div className={`${isDesktops && isHero ? 'basis-[46%] tab:mt-[95px]': `${children ? 'basis-[55%]' : `basis-[50%] ${title === 'Know More' ? 'mt-[25px]' : ''}`}`}`}>
           <h2
             className={`${
               isHero || children
@@ -61,7 +61,7 @@ const ContentImage = ({
             title={title}
             className={` ${
               isHero
-                ? "bg-[#27307D] text-white text-center py-[18px] px-[10%] font-[600] text-[14px] leading-[17px] mt-[30px] inline-block rounded-[4px] uppercase mb-[60px]"
+                ? "bg-[#27307D] text-white text-center py-[18px] px-[10%] font-[600] text-[14px] leading-[17px] mt-[30px] inline-block rounded-[4px] uppercase mb-[60px] md:mb-0"
                 : children ? 'font-[600] text-[14px] leading-[17px] text-center text-[#27307D] border-[1px] rounded-[4px] border-[#27307D] py-4 px-[5%] inline-block mt-5 mb-11 md:text-[16px] md:leading-[19px] md:py-3 md:px-[3%] lg:hover:text-white lg:hover:bg-[#27307D] transition-all ease-in-out duration-[.5s]' : `font-[600] text-[14px] leading-[17px] text-center w-[65%] mobile:w-[50%] mx-auto block rounded-[4px] border-2 border-[#F6C648] py-[18px] mobile:py-[22px] mt-6 mb-[95px]  ${
                     title === "Know More"
                       ? "text-[#F6C648] bg-transparent md:py-[6px] md:w-[21%] md:mx-0 lg:hover:text-[#27307D] lg:hover:bg-[#F6C648] transition-all ease-in-out duration-[.5s] md:mb-0"
@@ -72,7 +72,7 @@ const ContentImage = ({
             {title}
           </Link>
         </div>
-        <figure className={`${isDesktops && isHero ? 'basis-[48%]': `${children ? 'basis-[40%]' : 'basis-[40%]'}`}`}>
+        <figure className={`${isDesktops && isHero ? 'basis-[48%] md:mt-20 tab:mt-0': `${children ? 'basis-[40%]' : 'basis-[40%]'}`}`}>
           <img src={imagePath} alt={altMsg} className="w-full" />
         </figure>
       </div>
