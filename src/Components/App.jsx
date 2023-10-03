@@ -33,7 +33,7 @@ const App = () => {
     };
   }, [dispatch]);
   return (
-    <div>
+    <>
       <Nav />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -44,7 +44,7 @@ const App = () => {
         <Route exact path="/Contact" element={<Contact />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 };
 

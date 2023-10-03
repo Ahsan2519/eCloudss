@@ -9,7 +9,7 @@ const NavList = ({ isFooter, toggleHandler, isOpen }) => {
     <ul
       className={`${
         isFooter
-          ? "flex justify-center w-[80%] mx-auto flex-wrap gap-4"
+          ? "flex justify-center xl:w-[80%] mx-auto flex-wrap gap-4 md:w-full"
           : "flex items-center gap-2 md:gap-0 flex-col md:flex-row"
       }`}
     >
@@ -19,7 +19,7 @@ const NavList = ({ isFooter, toggleHandler, isOpen }) => {
             ? "nav-list "
             : `footer-nav-list ${
                 isDesktops
-                  ? "basis-[13%] font-[500] text-[24px] leading-[24px] text-[#27307D]"
+                  ? "xl:basis-[13%] md:basis-[15%] font-[500] text-[24px] leading-[24px] text-[#27307D]"
                   : ""
               }`
         }`}
@@ -40,7 +40,7 @@ const NavList = ({ isFooter, toggleHandler, isOpen }) => {
             ? "nav-list transition-all ease-in-out duration-[.3s] relative"
             : `footer-nav-list ${
                 isDesktops
-                  ? "basis-[13%] font-[500] text-[24px] leading-[24px] text-[#27307D]"
+                  ? "xl:basis-[13%] md:basis-[17%]] font-[500] text-[24px] leading-[24px] text-[#27307D]"
                   : ""
               }`
         }`}
@@ -96,7 +96,7 @@ const NavList = ({ isFooter, toggleHandler, isOpen }) => {
               ? "nav-list"
               : `footer-nav-list ${
                   isDesktops
-                    ? "basis-[13%] font-[500] text-[24px] leading-[24px] text-[#27307D]"
+                    ? "xl:basis-[13%] md:basis-[17%] font-[500] text-[24px] leading-[24px] text-[#27307D]"
                     : ""
                 }`
           }`}
@@ -119,7 +119,7 @@ const NavList = ({ isFooter, toggleHandler, isOpen }) => {
             ? "nav-list"
             : `footer-nav-list ${
                 isDesktops
-                  ? "basis-[13%] font-[500] text-[24px] leading-[24px] text-[#27307D]"
+                  ? "xl:basis-[13%] md:basis-[17%] font-[500] text-[24px] leading-[24px] text-[#27307D]"
                   : ""
               }`
         }`}
@@ -141,17 +141,18 @@ const NavList = ({ isFooter, toggleHandler, isOpen }) => {
           </NavLink>
         </li>
       ) : (
-        <Link
+        <li className={`footer-nav-list ${
+          isDesktops
+            ? "xl:basis-[13%] md:basis-[17%] font-[500] text-[24px] leading-[24px] text-[#27307D]"
+            : ""
+        }`}>
+          <Link
           to={"/CaseStudy"}
           title="Case Study"
-          className={`footer-nav-list ${
-            isDesktops
-              ? "basis-[13%] font-[500] text-[24px] leading-[24px] text-[#27307D]"
-              : ""
-          }`}
         >
           Case Study
         </Link>
+        </li>
       )}
     </ul>
   );

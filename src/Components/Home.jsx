@@ -15,40 +15,6 @@ const Home = () => {
   return (
     <>
       <main>
-        {/* banner section  */}
-        {/* <section className="relative hero-image-one py-[40px]">
-        <figure className='absolute top-0 hero-image-one'>
-        <img src="Images/Bg.svg" alt="Hero Image" />
-      </figure>
-        <figure className='absolute top-0 hero-image-two'>
-        <img src="Images/BgTwo.svg" alt="Hero Image" />
-      </figure>
-        <div className="wrapper">
-          <div>
-            <h2 className="text-[#27307D] font-[700] text-[30px] leading-[34px]">
-              Focus on Your Business Let us do the <span>Accounting</span>
-            </h2>
-            <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[10%] mt-[15px]">
-              We are great with numbers, our team works for YOU Leave your
-              back-office with the "Affordable-Experts"
-            </p>
-            <Link
-              to={"/Contact"}
-              title="Contact Us"
-              className="bg-[#27307D] text-white text-center py-[18px] px-[10%] font-[600] text-[14px] leading-[17px] mt-[30px] inline-block rounded-[4px] uppercase mb-[60px]"
-            >
-              Contact Us
-            </Link>
-          </div>
-          <figure className="mb-[30px]">
-            <img
-              src="Images/Banner.svg"
-              alt="Banner Image"
-              className="w-full"
-            />
-          </figure>
-        </div>
-      </section> */}
         <ContentImage
           heading={
             !isDesktops
