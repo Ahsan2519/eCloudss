@@ -65,6 +65,19 @@
   background: url("/public//Images/Ellipse.svg") no-repeat center;
 }
 
+.group::before {
+  background-color:#27307D1F; 
+  border: 3px solid transparent;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 992px){
+  .group:hover::before {
+    background-color: #F6C6481F;
+    border: 4px solid #F6C648;
+  }
+}
+
 .icon1::before { background: url('/public//Images/Cost.svg') no-repeat center; }
 .icon2::before { background: url('/public//Images/Integrity.svg') no-repeat center; }
 .icon3::before { background: url('/public//Images/professional.svg') no-repeat center; }
@@ -73,7 +86,7 @@
 .icon7::before { background: url('/public//Images/Confidential.svg') no-repeat center; }
 .icon8::before { background: url('/public//Images/Focus.svg') no-repeat center; }
 .tab-filter1::before { background: url('/public//Images/Tab1.svg') no-repeat center; }
-.tab-filter1.tab-desk-1::before { background: url('/public//Images/TabDesktop1.svg'), no-repeat center; }
+.tab-filter1.tab-desk-1::before { background: url('/public//Images/TabDesktop1.svg') no-repeat center; }
 .tab-filter2.tab-desk-2::before { background: url('/public//Images/TabDesktop2.svg') no-repeat center; }
 .tab-filter3.tab-desk-3::before { background: url('/public//Images/TabDesk3.svg') no-repeat center; }
 .tab-filter2::before { background: url('/public//Images/TabIcon2.svg') no-repeat center; }
@@ -113,7 +126,7 @@
 }
 
 .list-after {
-  @apply relative after:content-[''] after:absolute after:w-[44px] after:h-[2px] after:bg-[#27307D1F] after:bottom-[-6px] after:left-[50%] after:translate-x-[-50%]
+  @apply relative after:content-[''] after:absolute after:w-[44px] after:h-[2px] after:bg-[#27307D1F] after:bottom-[-6px] after:left-[50%] after:translate-x-[-50%] 
 }
 
 .tab-list {

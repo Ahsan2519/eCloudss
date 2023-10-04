@@ -97,8 +97,8 @@ const Home = () => {
           </div>
         </ContentImage>
         <UnorderList
-          heading={"Benefits"}
-          subTitle={"Building relationships by delivering quality"}
+          heading={!isDesktops ? 'Benefits' : 'Our commitment for'}
+          subTitle={!isDesktops ? 'Building relationships by delivering quality' : 'Nurturing Business through Quality, Trust, and People'}
         />
         <ContentImage
           heading={"Read our latest case study"}
