@@ -18,21 +18,16 @@ const ContentImage = ({
         isHero
           ? "relative hero-image-one py-[40px] md:pt-[50px] tab:pt-[65px] md:pb-[100px] md:overflow-hidden"
           : children
-          ? "bg-[#2929670D] py-[100px] md:pt-[100px] md:pb-[85px]"
+          ? "bg-[#2929670D] py-[100px] md:pt-[100px] md:pb-[85px] relative"
           : `bg-cover bg-no-repeat opacity-[55%] ${
               isDesktops ? "background desktop-bg" : "background"
             } ${title === "Know More" ? "py-8" : "pt-[32px] md:pb-0"}`
       } `}
     >
       {isDesktops && isHero && (
-        <>
-          <figure className="absolute top-0 hero-image-one">
-            <img src="Images/Bg.svg" alt="Hero Image" />
-          </figure>
-          <figure className="absolute top-0 hero-image-two">
-            <img src="Images/BgTwo.svg" alt="Hero Image" />
-          </figure>
-        </>
+        <figure className="absolute top-0 hero-image-two z-[-1]">
+          <img src="Images/BgTwo.svg" alt="Hero Image" />
+        </figure>
       )}
 
       <div
@@ -45,7 +40,7 @@ const ContentImage = ({
         <div
           className={`${
             isDesktops && isHero
-              ? "basis-[46%] tab:mt-[95px]"
+              ? "basis-[51%] tab:mt-[95px]"
               : `${
                   children
                     ? "basis-[55%]"
@@ -69,7 +64,7 @@ const ContentImage = ({
           <p
             className={`${
               isHero || children
-                ? `font-[400] text-[14px] leading-[21px] text-[#696969] pr-[10%] mt-[15px]  ${
+                ? `font-[400] text-[14px] leading-[21px] text-[#696969] pr-[10%] md:pr-[18%] ${children ? 'md:pr-[12%]' : ''}'} mt-[15px]  ${
                     isDesktops ? "text-[20px] leading-[28px]" : ""
                   }`
                 : `font-[400] text-[14px] leading-[21px] text-center text-white px-[20%] md:text-left md:text-[16px] md:leading-[20px] md:pl-0 ${
@@ -102,7 +97,7 @@ const ContentImage = ({
           className={`${
             isDesktops && isHero
               ? "basis-[48%] md:mt-20 tab:mt-0"
-              : `${children ? "basis-[44%]" : "basis-[40%]"}`
+              : `${children ? "md:absolute md:top-[50%] md:translate-y-[-50%] md:right-[5%] md:w-[47%]" : "basis-[40%]"}`
           }`}
         >
           <img src={imagePath} alt={altMsg} className="w-full" />
