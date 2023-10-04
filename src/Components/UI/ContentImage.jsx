@@ -18,7 +18,7 @@ const ContentImage = ({
         isHero
           ? "relative hero-image-one py-[40px] md:pt-[50px] tab:pt-[65px] md:pb-[100px] md:overflow-hidden"
           : children
-          ? "bg-[#2929670D] py-[100px] md:pt-[100px] md:pb-[85px] relative"
+          ? "bg-[#2929670D] py-[100px] md:pt-[100px] md:pb-[70px] relative"
           : `bg-cover bg-no-repeat opacity-[55%] ${
               isDesktops ? "background desktop-bg" : "background"
             } ${title === "Know More" ? "py-8" : "pt-[32px] md:pb-0"}`
@@ -34,7 +34,11 @@ const ContentImage = ({
         className={`wrapper relative z-40 lg:flex md:justify-between ${
           isDesktops && isHero
             ? "flex flex-col lg:flex-row justify-between items-center md:relative md:z-50 md:items-stretch"
-            : `${children ? "md:items-start" : "md:items-center"}`
+            : `${
+                children
+                  ? "md:items-start md:flex-col tab:flex-row"
+                  : "md:items-center"
+              }`
         }`}
       >
         <div
@@ -64,7 +68,7 @@ const ContentImage = ({
           <p
             className={`${
               isHero || children
-                ? `font-[400] text-[14px] leading-[21px] text-[#696969] pr-[10%] md:pr-[18%] ${
+                ? `font-[400] text-[14px] leading-[21px] text-[#696969] pr-[10%] md:pr-[14%] ${
                     children ? "md:pr-[12%]" : ""
                   }'} mt-[15px]  ${
                     isDesktops ? "text-[20px] leading-[28px]" : ""
@@ -84,7 +88,7 @@ const ContentImage = ({
               isHero
                 ? "bg-[#27307D] text-white text-center py-[18px] px-[10%] font-[600] text-[14px] leading-[17px] mt-[30px] inline-block rounded-[4px] uppercase mb-[60px] md:mb-0 lg:hover:bg-transparent border-[2px] border-[transparent] transition-all ease-in-out duration-[.5s] lg:border-[#27307D] lg:hover:text-[#27307D]"
                 : children
-                ? "font-[600] text-[14px] leading-[17px] text-center text-[#27307D] border-[1px] rounded-[4px] border-[#27307D] py-4 px-[5%] inline-block mt-5 mb-11 md:text-[16px] md:leading-[19px] md:px-[3%] lg:hover:text-white lg:hover:bg-[#27307D] transition-all ease-in-out duration-[.5s]  md:pt-[10px] md:mt-0 lg:mt-5 medium::mt-0 xl:w-[24%] medium::w-[21%] md:py-2"
+                ? "font-[600] text-[14px] leading-[17px] text-center text-[#27307D] border-[1px] rounded-[4px] border-[#27307D] py-4 px-[5%] inline-block mt-5 mb-11 md:text-[16px] md:leading-[19px] md:px-[3%] lg:hover:text-white lg:hover:bg-[#27307D] transition-all ease-in-out duration-[.5s]  md:pt-[10px] md:mt-[15px] tab:mt-0 xl:w-[24%] medium::w-[21%] md:py-2"
                 : `font-[600] text-[14px] leading-[17px] text-center w-[65%] mobile:w-[50%] mx-auto block rounded-[4px] border-2 border-[#F6C648] py-[18px] mobile:py-[22px] mt-6 mb-[95px]  ${
                     title === "Know More"
                       ? "text-[#F6C648] bg-transparent md:py-[6px] md:w-[25%] tab:w-[21%] md:mx-0 lg:hover:text-[#27307D] lg:hover:bg-[#F6C648] transition-all ease-in-out duration-[.5s] md:mb-0"
@@ -101,7 +105,7 @@ const ContentImage = ({
               ? "basis-[48%] md:mt-20 tab:mt-0"
               : `${
                   children
-                    ? "md:absolute md:top-[50%] md:translate-y-[-50%] md:right-[5%] md:w-[47%]"
+                    ? "tab:absolute tab:top-[50%] tab:translate-y-[-50%] tab:right-[5%] tab:w-[47%]"
                     : "basis-[40%]"
                 }`
           }`}

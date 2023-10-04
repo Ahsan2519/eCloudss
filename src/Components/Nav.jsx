@@ -73,7 +73,7 @@ const Nav = () => {
                     href="#FIXME"
                     title="Instagram"
                     target="_blank"
-                    className="icon-common instagram before:content-[''] lg:hover:before:text-[#696969] transition-all ease-in-out duration-[.5s]" 
+                    className="icon-common instagram before:content-[''] lg:hover:before:text-[#696969] transition-all ease-in-out duration-[.5s]"
                   >
                     Instagram
                   </a>
@@ -92,7 +92,7 @@ const Nav = () => {
             : ""
         }`}
       >
-        <div className="wrapper lg:w-[70%] md:w-[90%] 2xl:w-[45%]">
+        <div className="wrapper tab:w-[70%] lg:w-[80%] md:w-[90%] 2xl:w-[45%]">
           <NavList
             isFooter={false}
             toggleHandler={toggleHandler}

@@ -35,12 +35,12 @@ const Home = () => {
         <Counter />
         <section className="bg-[#DADAE5]">
           <div className="wrapper pt-[70px]">
-            <h2 className="font-[700] text-[30px] leading-[34px] text-[#27307D] pb-5 md:pr-[53%]">
+            <h2 className="font-[700] text-[30px] leading-[34px] text-[#27307D] pb-5 md:text-[52px] md:leading-[64px]  md:pr-[3%] tab:pr-0  2xl:pr-[53%]">
               {!isDesktops
                 ? " We offer a full range of accounting services for your business"
                 : "Experience a complete spectrum of  offshore financial services with us "}
             </h2>
-            <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pb-[50px] md:pr-[54%]">
+            <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pb-[50px] md:pr-[14%] tab:pr-[42%] 2xl:pr-[54%] md:text-[16px] md:leading-[20px]">
               {!isDesktops
                 ? `Liquorice lemon drops powder chocolate liquorice candy dessert
               gummi bears. Caramels marzipan donut jujubes sweet roll. Powder
@@ -62,17 +62,19 @@ const Home = () => {
               : "In the vast landscape of financial requirements, eCloudacc distinguishes itself as a unified, cost-effective platform. Seamlessly integrating services across niches, offering global assurance, TAS, Bookkeeping, and CFO outsourcing. With a skilled team boasting Big 4, CPA and ACCA experienced, we offer comprehensive solutions and robust back-office support. We have a track record of 40,000+ dedicated hours to clients in numerous countries, including the USA, UK, and Canada. "
           }
           path={"/About"}
-          title={!isDesktops ? 'KNOW MORE ABOUT US' :'KNOW MORE'}
-          imagePath={!isDesktops ? "Images/Beleive.svg" : "Images/DesktopImage.svg"}
+          title={!isDesktops ? "KNOW MORE ABOUT US" : "KNOW MORE"}
+          imagePath={
+            !isDesktops ? "Images/Beleive.svg" : "Images/DesktopImage.svg"
+          }
           altMsg={"Know More"}
           isHero={false}
         >
-          <div className="md:flex justify-between items-center md:w-[95%] xl:w-[75%] medium::w-[65%] md:items-start">
+          <div className="md:flex justify-between items-center md:w-[95%] xl:w-[75%] 2xl:w-[67%] md:items-start">
             <div className="basis-[45%]">
               <h3 className="text-[#27307D] font-[600] text-[24px] leading-[34px] mt-10">
                 Our Mission
               </h3>
-              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] mt-[10px] md:pr-[10%] md:mt-[8px]">
+              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] md:pr-0 mt-[10px] md:mt-[8px] md:text-[16px] md:leading-[20px]">
                 {!isDesktops
                   ? `Our mission is simple enough. To unearth the magic behind the
                 numbers of organizations big and small using ratio analysis and
@@ -85,7 +87,7 @@ const Home = () => {
               <h3 className="text-[#27307D] font-[600] text-[24px] leading-[34px] mt-10">
                 Our Vision
               </h3>
-              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] mt-[10px] md:pr-[10%] md:mt-[8px]">
+              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] md:pr-0 mt-[10px]  md:mt-[8px] md:text-[16px] md:leading-[20px]">
                 {!isDesktops
                   ? `Our vision is to utilize the resources with accurate workable
                 plans that deliver results. We know resources are scarce and the
