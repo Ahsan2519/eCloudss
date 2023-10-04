@@ -18,7 +18,7 @@ const ContentImage = ({
         isHero
           ? "relative hero-image-one py-[40px] md:pt-[50px] tab:pt-[65px] md:pb-[100px] md:overflow-hidden"
           : children
-          ? "bg-[#2929670D] py-[85px]"
+          ? "bg-[#2929670D] py-[100px] md:pt-[100px] md:pb-[85px]"
           : `bg-cover bg-no-repeat opacity-[55%] ${
               isDesktops ? "background desktop-bg" : "background"
             } ${title === "Know More" ? "py-8" : "pt-[32px] md:pb-0"}`
@@ -36,7 +36,7 @@ const ContentImage = ({
       )}
 
       <div
-        className={`wrapper md:flex md:justify-between ${
+        className={`wrapper lg:flex md:justify-between ${
           isDesktops && isHero
             ? "flex flex-col tab:flex-row justify-between items-center md:relative md:z-50 md:items-stretch"
             : `${children ? "md:items-start" : "md:items-center"}`
@@ -87,7 +87,7 @@ const ContentImage = ({
               isHero
                 ? "bg-[#27307D] text-white text-center py-[18px] px-[10%] font-[600] text-[14px] leading-[17px] mt-[30px] inline-block rounded-[4px] uppercase mb-[60px] md:mb-0 lg:hover:bg-transparent border-[2px] border-[transparent] transition-all ease-in-out duration-[.5s] lg:border-[#27307D] lg:hover:text-[#27307D]"
                 : children
-                ? "font-[600] text-[14px] leading-[17px] text-center text-[#27307D] border-[1px] rounded-[4px] border-[#27307D] py-4 px-[5%] inline-block mt-5 mb-11 md:text-[16px] md:leading-[19px] md:py-3 md:px-[3%] lg:hover:text-white lg:hover:bg-[#27307D] transition-all ease-in-out duration-[.5s]"
+                ? "font-[600] text-[14px] leading-[17px] text-center text-[#27307D] border-[1px] rounded-[4px] border-[#27307D] py-4 px-[5%] inline-block mt-5 mb-11 md:text-[16px] md:leading-[19px] md:px-[3%] lg:hover:text-white lg:hover:bg-[#27307D] transition-all ease-in-out duration-[.5s]  md:pt-[10px] md:mt-0 lg:mt-5 medium::mt-0 xl:w-[24%] medium::w-[21%] md:py-2"
                 : `font-[600] text-[14px] leading-[17px] text-center w-[65%] mobile:w-[50%] mx-auto block rounded-[4px] border-2 border-[#F6C648] py-[18px] mobile:py-[22px] mt-6 mb-[95px]  ${
                     title === "Know More"
                       ? "text-[#F6C648] bg-transparent md:py-[6px] md:w-[25%] tab:w-[21%] md:mx-0 lg:hover:text-[#27307D] lg:hover:bg-[#F6C648] transition-all ease-in-out duration-[.5s] md:mb-0"
@@ -102,7 +102,7 @@ const ContentImage = ({
           className={`${
             isDesktops && isHero
               ? "basis-[48%] md:mt-20 tab:mt-0"
-              : `${children ? "basis-[40%]" : "basis-[40%]"}`
+              : `${children ? "basis-[44%]" : "basis-[40%]"}`
           }`}
         >
           <img src={imagePath} alt={altMsg} className="w-full" />

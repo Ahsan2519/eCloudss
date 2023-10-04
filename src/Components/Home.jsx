@@ -62,17 +62,17 @@ const Home = () => {
               : "In the vast landscape of financial requirements, eCloudacc distinguishes itself as a unified, cost-effective platform. Seamlessly integrating services across niches, offering global assurance, TAS, Bookkeeping, and CFO outsourcing. With a skilled team boasting Big 4, CPA and ACCA experienced, we offer comprehensive solutions and robust back-office support. We have a track record of 40,000+ dedicated hours to clients in numerous countries, including the USA, UK, and Canada. "
           }
           path={"/About"}
-          title={"KNOW MORE ABOUT US"}
-          imagePath={"Images/Beleive.svg"}
+          title={!isDesktops ? 'KNOW MORE ABOUT US' :'KNOW MORE'}
+          imagePath={!isDesktops ? "Images/Beleive.svg" : "Images/DesktopImage.svg"}
           altMsg={"Know More"}
           isHero={false}
         >
-          <div className="md:flex justify-between items-center">
+          <div className="md:flex justify-between items-center md:w-[95%] xl:w-[75%] medium::w-[65%] md:items-start">
             <div className="basis-[45%]">
               <h3 className="text-[#27307D] font-[600] text-[24px] leading-[34px] mt-10">
                 Our Mission
               </h3>
-              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] mt-[10px] md:pr-[35%]">
+              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] mt-[10px] md:pr-[10%] md:mt-[8px]">
                 {!isDesktops
                   ? `Our mission is simple enough. To unearth the magic behind the
                 numbers of organizations big and small using ratio analysis and
@@ -85,7 +85,7 @@ const Home = () => {
               <h3 className="text-[#27307D] font-[600] text-[24px] leading-[34px] mt-10">
                 Our Vision
               </h3>
-              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] mt-[10px] md:pr-[35%]">
+              <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] mt-[10px] md:pr-[10%] md:mt-[8px]">
                 {!isDesktops
                   ? `Our vision is to utilize the resources with accurate workable
                 plans that deliver results. We know resources are scarce and the
