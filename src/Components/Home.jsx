@@ -97,8 +97,12 @@ const Home = () => {
           </div>
         </ContentImage>
         <UnorderList
-          heading={!isDesktops ? 'Benefits' : 'Our commitment for'}
-          subTitle={!isDesktops ? 'Building relationships by delivering quality' : 'Nurturing Business through Quality, Trust, and People'}
+          heading={!isDesktops ? "Benefits" : "Our commitment for"}
+          subTitle={
+            !isDesktops
+              ? "Building relationships by delivering quality"
+              : "Nurturing Business through Quality, Trust, and People"
+          }
         />
         <ContentImage
           heading={"Read our latest case study"}
@@ -134,7 +138,11 @@ const Home = () => {
                         ? `relative flex px-[1.4%] pt-3 md:basis-[48%] md:mb-3 tab:md:mb-0 tab:basis-[24%] text-left md:pr-[5px] md:pb-[60px] ${
                             idx === 1
                               ? "md:[&>*:nth-child(2)]:md:top-[59%] air:[&>*:nth-child(2)]:md:top-[51%] md:[&>*:nth-child(3)]:md:pt-[8px] tab:[&>*:nth-child(2)]:md:top-[58%] tab:[&>*:nth-child(3)]:md:pt-[10px] tab:[&>*:nth-child(3)]:md:ml-[15%]"
-                              : idx === 0 ? 'tab:[&>*:nth-child(2)]:top-[52.5%] 2xl:[&>*:nth-child(2)]:top-[43.5%]' : ''
+                              : idx === 0
+                              ? "tab:[&>*:nth-child(2)]:top-[52.5%] 2xl:[&>*:nth-child(2)]:top-[43.5%]"
+                              : idx === 3
+                              ? "tab:[&>*:nth-child(3)]:pl-[8%]"
+                              : ""
                           }`
                         : idx === index
                         ? "flex w-[85%] mx-auto px-[8%] pt-[30px] pb-[45px]"
