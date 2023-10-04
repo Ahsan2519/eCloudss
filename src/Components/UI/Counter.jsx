@@ -54,7 +54,7 @@ const Counter = () => {
             className={`mobile:basis-[35%] text-center ${
               !isDesktops
                 ? "block"
-                : "flex justify-center items-center xl:text-[42px] lg:text-[35px] leading-[64px] md:basis-[32%] lg:basis-[35%] "
+                : "flex justify-center items-center xl:text-[42px] lg:text-[35px] leading-[64px] md:basis-[32%] lg:basis-[35%] medium:basis-[28%] "
             }`}
           >
             <span className="block large:basis-[52%] xl:basis-[56%]">{`${experienceCount} Years+`}</span>
@@ -72,7 +72,7 @@ const Counter = () => {
             <span className="block large::basis-[19%]">
               {!isDesktops ? `${projectsCount}` : `${projectsCount}+`}
             </span>
-            <span className="block counter relative mt-[5px] uppercase md:text-[17px] tab:text-[20px] leading-[24px] md:before:rotate-[90deg] md:before:h-[2px] md:basis-[41%] md:before:left-[2%] md:before:top-[47%] md:before:w-[43px] md:px-[5%] md:text-left">
+            <span className="block counter relative mt-[5px] uppercase md:text-[17px] tab:text-[20px] leading-[24px] md:before:rotate-[90deg] md:before:h-[2px] md:basis-[41%] md:before:left-[2%] medium:before:left-[9%] md:before:top-[47%] md:before:w-[43px] md:px-[5%] medium:pl-[6%] md:text-left">
               {!isDesktops
                 ? "Projects Done"
                 : `Offering services in countries `}

@@ -31,9 +31,9 @@ const ContentImage = ({
       )}
 
       <div
-        className={`wrapper lg:flex md:justify-between ${
+        className={`wrapper relative z-40 lg:flex md:justify-between ${
           isDesktops && isHero
-            ? "flex flex-col tab:flex-row justify-between items-center md:relative md:z-50 md:items-stretch"
+            ? "flex flex-col lg:flex-row justify-between items-center md:relative md:z-50 md:items-stretch"
             : `${children ? "md:items-start" : "md:items-center"}`
         }`}
       >
@@ -64,7 +64,9 @@ const ContentImage = ({
           <p
             className={`${
               isHero || children
-                ? `font-[400] text-[14px] leading-[21px] text-[#696969] pr-[10%] md:pr-[18%] ${children ? 'md:pr-[12%]' : ''}'} mt-[15px]  ${
+                ? `font-[400] text-[14px] leading-[21px] text-[#696969] pr-[10%] md:pr-[18%] ${
+                    children ? "md:pr-[12%]" : ""
+                  }'} mt-[15px]  ${
                     isDesktops ? "text-[20px] leading-[28px]" : ""
                   }`
                 : `font-[400] text-[14px] leading-[21px] text-center text-white px-[20%] md:text-left md:text-[16px] md:leading-[20px] md:pl-0 ${
@@ -97,7 +99,11 @@ const ContentImage = ({
           className={`${
             isDesktops && isHero
               ? "basis-[48%] md:mt-20 tab:mt-0"
-              : `${children ? "md:absolute md:top-[50%] md:translate-y-[-50%] md:right-[5%] md:w-[47%]" : "basis-[40%]"}`
+              : `${
+                  children
+                    ? "md:absolute md:top-[50%] md:translate-y-[-50%] md:right-[5%] md:w-[47%]"
+                    : "basis-[40%]"
+                }`
           }`}
         >
           <img src={imagePath} alt={altMsg} className="w-full" />
