@@ -73,7 +73,7 @@
 .icon7::before { background: url('/public//Images/Confidential.svg') no-repeat center; }
 .icon8::before { background: url('/public//Images/Focus.svg') no-repeat center; }
 .tab-filter1::before { background: url('/public//Images/Tab1.svg') no-repeat center; }
-.tab-filter1.tab-desk-1::before { background: url('/public//Images/TabDesktop1.svg') no-repeat center; }
+.tab-filter1.tab-desk-1::before { background: url('/public//Images/TabDesktop1.svg'), no-repeat center; }
 .tab-filter2.tab-desk-2::before { background: url('/public//Images/TabDesktop2.svg') no-repeat center; }
 .tab-filter3.tab-desk-3::before { background: url('/public//Images/TabDesk3.svg') no-repeat center; }
 .tab-filter2::before { background: url('/public//Images/TabIcon2.svg') no-repeat center; }

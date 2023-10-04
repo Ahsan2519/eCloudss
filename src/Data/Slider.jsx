@@ -21,7 +21,7 @@ const Slider = [
     desktopDescription: `Ecloudacc have been invaluable collaborators for over 18 months. Their expertise shines across engagements, making them an essential part of our team. `,
     url: "Images/Slider3.svg",
     title: "MARIE JANE",
-    role: "Financial Manager (Top 65 Accounting Firms)",
+    role: "Financial Manager",
   },
   {
     mobileDiscription: `The eCloudacc team is a top recommendation. Their expertise in
