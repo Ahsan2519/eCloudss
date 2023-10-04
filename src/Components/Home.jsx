@@ -121,7 +121,7 @@ const Home = () => {
             <ul
               className={`flex ${
                 isDesktops
-                  ? "justify-between items-stretch w-[88%] gap-[20px] md:flex-wrap tab:flex-nowrap mx-auto [&>*:nth-child(2)]:pt-1  [&>*:nth-child(2)]:pl[2%] [&>*:nth-child(3)]:pt-10"
+                  ? "justify-between items-stretch w-[88%] gap-[20px] md:flex-wrap tab:flex-nowrap mx-auto [&>*:nth-child(2)]:pt-1  [&>*:nth-child(2)]:pl-[2.5%] [&>*:nth-child(3)]:pt-10 [&>*:nth-child(4)]:pt-4 [&>*:nth-child(4)]:pl-0"
                   : ""
               }`}
             >
@@ -134,7 +134,7 @@ const Home = () => {
                         ? `relative flex px-[1.4%] pt-3 md:basis-[48%] md:mb-3 tab:md:mb-0 tab:basis-[24%] text-left md:pr-[5px] md:pb-[60px] ${
                             idx === 1
                               ? "md:[&>*:nth-child(2)]:md:top-[59%] air:[&>*:nth-child(2)]:md:top-[51%] md:[&>*:nth-child(3)]:md:pt-[8px] tab:[&>*:nth-child(2)]:md:top-[58%] tab:[&>*:nth-child(3)]:md:pt-[10px] tab:[&>*:nth-child(3)]:md:ml-[15%]"
-                              : idx === 0 ? 'tab:[&>*:nth-child(2)]:md:top-[52.5%]' : ''
+                              : idx === 0 ? 'tab:[&>*:nth-child(2)]:top-[52.5%] 2xl:[&>*:nth-child(2)]:top-[43.5%]' : ''
                           }`
                         : idx === index
                         ? "flex w-[85%] mx-auto px-[8%] pt-[30px] pb-[45px]"
