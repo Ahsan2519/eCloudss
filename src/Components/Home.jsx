@@ -35,12 +35,12 @@ const Home = () => {
         <Counter />
         <section className="bg-[#DADAE5]">
           <div className="wrapper pt-[70px]">
-            <h2 className="font-[700] text-[30px] leading-[34px] text-[#27307D] pb-5 md:text-[52px] md:leading-[64px]  md:pr-[3%] tab:pr-0  2xl:pr-[53%]">
+            <h2 className="font-[700] text-[30px] leading-[34px] text-[#27307D] pb-5 md:text-[52px] md:leading-[64px]  md:pr-[3%] tab:pr-0  2xl:pr-[19%]">
               {!isDesktops
                 ? " We offer a full range of accounting services for your business"
                 : "Experience a complete spectrum of  offshore financial services with us "}
             </h2>
-            <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pb-[50px] md:pr-[14%] tab:pr-[42%] 2xl:pr-[54%] md:text-[16px] md:leading-[20px]">
+            <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pb-[50px] md:pr-[14%] tab:pr-[42%] 2xl:pr-[53%] md:text-[16px] md:leading-[20px]">
               {!isDesktops
                 ? `Liquorice lemon drops powder chocolate liquorice candy dessert
               gummi bears. Caramels marzipan donut jujubes sweet roll. Powder
