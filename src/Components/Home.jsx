@@ -121,7 +121,11 @@ const Home = () => {
         />
         <section className="py-[85px]">
           <div className="wrapper relative">
-            <h2 className="font-[700] text-[30px] leading-[64px] text-[#27307D] text-center mb-4">
+            <h2
+              className={`font-[700] text-[30px] leading-[64px] text-[#27307D] text-center mb-4 elips md:text-[52px] md:leading-[64px] ${
+                !isDesktops ? "testimonila-mobile" : ""
+              }`}
+            >
               Testimonials
             </h2>
             <ul

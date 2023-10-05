@@ -92,6 +92,8 @@
 .tab-filter3::before { background: url('/public//Images/TabIcon3.svg') no-repeat center; }
 .background.desktop-bg { background: url('/public//Images/DesktopBg.svg') , linear-gradient(to bottom, #0C4CE4, #27307D); }
 .nav-list .active::before { background: url('/public//Images/EllipseNav.svg') no-repeat center; }
+.elips::before { background: url('/public//Images/TestimonialEllipse.svg') no-repeat center; }
+.elips.testimonila-mobile::before { background: url('/public//Images/MobileTestimonial.svg') no-repeat center; }
 
 @tailwind base;
 .wrapper {
@@ -137,6 +139,10 @@
 .tab-list {
   @apply relative before:absolute before:content-[''] before:w-[48px] before:h-[48px] before:top-[-24%]  md:before:w-[114px] md:before:h-[86px] before:translate-y-[50%] before:left-[4%] md:before:translate-y-[-50%]  md:before:left-[50%] md:before:translate-x-[-50%] md:before:top-[50%]
 } 
+
+.elips {
+  @apply before:w-full before:h-[15px] md:before:h-[21px] relative before:absolute before:bottom-[20%] md:before:bottom-[8%]  z-[2] before:z-[-2] before:left-[50%] before:translate-x-[-50%] 
+}
 
 .active {
   @apply text-[#27307D]
