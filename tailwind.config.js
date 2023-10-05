@@ -16,6 +16,7 @@ module.exports = {
         '2xl': '1536px',
         'large': '1600px',
         'air': '820px',
+        'small' : '376px'
       },
     },
   },

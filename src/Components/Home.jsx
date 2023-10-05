@@ -35,9 +35,9 @@ const Home = () => {
         <Counter />
         <section className="bg-[#DADAE5]">
           <div className="wrapper pt-[70px]">
-            <h2 className="font-[700] text-[30px] leading-[34px] text-[#27307D] pb-5 md:text-[52px] md:leading-[64px]  md:pr-[3%] tab:pr-0  2xl:pr-[19%]">
+            <h2 className={`font-[700] text-[30px] leading-[34px] text-[#27307D] pb-5 md:text-[49px] tab:text-[52px] md:leading-[64px]  md:pr-[3%] tab:pr-0  2xl:pr-[19%]  ${isDesktops ? 'tab-desktop-elips elips-commmon md:before:h-[21px] md:before:bottom-[18%] md:before:left-[34%]' : 'elips-mobile elips-commmon before:h-[14px] small:before:bottom-[18%] small:before:left-[33%] before:left-[36%] before:bottom-[36%]'}`}>
               {!isDesktops
-                ? " We offer a full range of accounting services for your business"
+                ?  'We offer a full range of accounting services for your business'
                 : "Experience a complete spectrum of  offshore financial services with us "}
             </h2>
             <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pb-[50px] md:pr-[14%] tab:pr-[42%] 2xl:pr-[53%] md:text-[16px] md:leading-[20px]">

@@ -100,6 +100,8 @@
 .elips-serving2::before { background: url('/public//Images/ServingElips2.svg') no-repeat center; }
 .serving-desktop::before { background: url('/public//Images/ServingHeaderElips.svg') no-repeat center; }
 .serving-desktop.serving-mobile::before { background: url('/public//Images/ServingMobileHeadingElips.svg') no-repeat center; }
+.tab-desktop-elips::before { background: url('/public//Images/TabDesktopElips.svg') no-repeat center; }
+.elips-mobile::before { background: url('/public//Images/TabMobileElips.svg') no-repeat center; }
 
 @tailwind base;
 .wrapper {
