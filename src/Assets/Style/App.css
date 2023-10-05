@@ -102,6 +102,8 @@
 .serving-desktop.serving-mobile::before { background: url('/public//Images/ServingMobileHeadingElips.svg') no-repeat center; }
 .tab-desktop-elips::before { background: url('/public//Images/TabDesktopElips.svg') no-repeat center; }
 .elips-mobile::before { background: url('/public//Images/TabMobileElips.svg') no-repeat center; }
+.banner-desktop-elips::before { background: url('/public//Images/BannerElips.svg') no-repeat center; }
+.banner-mobile-elips::before { background: url('/public//Images/Banner-Mobile-Elips.svg') no-repeat center; }
 
 @tailwind base;
 .wrapper {

@@ -58,6 +58,10 @@ const ContentImage = ({
             className={`${
               isHero || children
                 ? `text-[#27307D] font-[700] text-[30px] md:text-[52px] md:leading-[64px] leading-[34px] ${
+                    isDesktops && isHero
+                      ? "banner-desktop-elips elips-commmon before:h-[21px] md:before:bottom-[7%] 2xl:before:bottom-[7%] 2xl:before:left-[72%] xl:before:bottom-[40%] xl:before:left-[42%] md:before:left-[20%] lg:before:left-[29%]"
+                      : ""
+                  } ${
                     isDesktops && children
                       ? "serving-desktop elips-commmon md:before:h-[17px] 2xl:bottom-[14%] 2xl:before:left-[50%] 2xl:before:translate-x-[-50%] xl:before:bottom-[20%] md:before:bottom-[10%] md:before:left-[25%] "
                       : ""
@@ -67,7 +71,18 @@ const ContentImage = ({
                   }`
             }`}
           >
-            {heading} {isHero && !isDesktops && <span>Accounting</span>}{" "}
+            {heading}{" "}
+            {isHero && !isDesktops && (
+              <span
+                className={`${
+                  !isDesktops
+                    ? "banner-mobile-elips elips-commmon before:h-[14px] before:bottom-[16%] small:block inline-block small:before:left-[-26%] small:before:transform-none"
+                    : ""
+                }`}
+              >
+                Accounting
+              </span>
+            )}
             {children && !isDesktops ? (
               <span
                 className={`${
