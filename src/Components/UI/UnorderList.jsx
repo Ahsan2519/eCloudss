@@ -6,10 +6,14 @@ const UnorderList = ({ heading, subTitle }) => {
   return (
     <section className="pt-[75px] pb-[85px]">
       <div className="wrapper">
-        <h2 className="font-[700] text-[30px] leading-[34px] text-center text-[#27307D] mb-4 md:text-[52px] md:leading-[64px]">
+        <h2
+          className={`font-[700] text-[30px] leading-[34px] text-center text-[#27307D] mb-4 md:text-[52px] md:leading-[64px] md:before:h-[21px] before:bottom-[10%] before:left-[51%] md:before:bottom-[14%] before:h-[11px] ${
+            !isDesktops ? "heading-ellipse benifits" : "heading-ellipse "
+          } elips-commmon`}
+        >
           {heading}
         </h2>
-        <p className="font-[400] text-[14px] leading-[21px] text-center text-[#696969] mb-[55px] md:text-[16px] md:leading-[20px">
+        <p className="font-[400] text-[14px] leading-[21px] text-center text-[#696969] mb-[55px] md:text-[16px] md:leading-[20px md:mb-[25px]">
           {subTitle}
         </p>
         <ul className="flex justify-between flex-wrap">

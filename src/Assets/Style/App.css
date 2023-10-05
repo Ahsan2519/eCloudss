@@ -94,6 +94,8 @@
 .nav-list .active::before { background: url('/public//Images/EllipseNav.svg') no-repeat center; }
 .elips::before { background: url('/public//Images/TestimonialEllipse.svg') no-repeat center; }
 .elips.testimonila-mobile::before { background: url('/public//Images/MobileTestimonial.svg') no-repeat center; }
+.heading-ellipse::before { background: url('/public//Images/CommitmentEllipse.svg') no-repeat center; }
+.heading-ellipse.benifits::before { background: url('/public//Images/BenifitsElips.svg') no-repeat center; }
 
 @tailwind base;
 .wrapper {
@@ -141,7 +143,11 @@
 } 
 
 .elips {
-  @apply before:w-full before:h-[15px] md:before:h-[21px] relative before:absolute before:bottom-[20%] md:before:bottom-[8%]  z-[2] before:z-[-2] before:left-[50%] before:translate-x-[-50%] 
+  @apply  before:h-[15px] md:before:h-[21px]  before:absolute before:bottom-[20%] md:before:bottom-[8%] 
+}
+
+.elips-commmon {
+  @apply before:w-full relative before:z-[-2] z-[2] before:absolute before:content-[''] before:left-[50%]  before:translate-x-[-50%]
 }
 
 .active {
