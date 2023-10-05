@@ -88,7 +88,7 @@ const Nav = () => {
           active ? "top-[67px]" : "top-[-100%]"
         } md:py-[9px] ${
           !isDesktops
-            ? "absolute w-full left-0 z-10 overflow-hidden transition-all ease-in-out duration-[.8s]"
+            ? "absolute w-full left-0 z-[100] overflow-hidden transition-all ease-in-out duration-[.8s]"
             : ""
         }`}
       >

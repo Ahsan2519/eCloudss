@@ -91,6 +91,7 @@
 .tab-filter2::before { background: url('/public//Images/TabIcon2.svg') no-repeat center; }
 .tab-filter3::before { background: url('/public//Images/TabIcon3.svg') no-repeat center; }
 .background.desktop-bg { background: url('/public//Images/DesktopBg.svg') , linear-gradient(to bottom, #0C4CE4, #27307D); }
+.nav-list .active::before { background: url('/public//Images/EllipseNav.svg') no-repeat center; }
 
 @tailwind base;
 .wrapper {
@@ -98,8 +99,13 @@
 }
 
 .nav-list {
-  @apply font-[400] text-[20px] leading-[28px] text-center text-[#696969] py-2 w-full lg:hover:text-[#27307D] transition-all ease-in-out duration-[.5s]
+  @apply font-[400] text-[20px] leading-[28px] text-center text-[#696969] py-2 w-full lg:hover:text-[#27307D] transition-all ease-in-out duration-[.5s]  
 }
+
+.nav-list .active {
+  @apply before:content-[''] before:absolute relative before:w-[80px] before:h-[8px] z-[2] before:bottom-[10%] before:left-[50%] before:translate-x-[-50%] before:z-[-2]
+}
+
 .common {
   @apply after:content-['\f078'] after:font-['FontAwesome'] after:text-[19px] after:text-[#696969] after:absolute after:top-[53%] after:translate-y-[-50%] after:right-[-33%];
 }
