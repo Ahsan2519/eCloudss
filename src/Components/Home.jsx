@@ -51,11 +51,7 @@ const Home = () => {
           <TabFilter />
         </section>
         <ContentImage
-          heading={
-            !isDesktops
-              ? "What we believe in..."
-              : "Serving beyond boundaries..."
-          }
+          heading={!isDesktops ? "What " : "Serving beyond boundaries..."}
           description={
             !isDesktops
               ? "Our aim is to use our unique experiences and expertise gained over a period of time with our own insights derived from the experience. We are passionate about supporting our clients in achieving their business goals and targets. Using these invaluable insights, we want to deliver quality solutions to increase our client’s productivity.."
@@ -71,7 +67,11 @@ const Home = () => {
         >
           <div className="md:flex justify-between items-center md:w-[95%] xl:w-[75%] 2xl:w-[67%] md:items-start">
             <div className="basis-[45%]">
-              <h3 className="text-[#27307D] font-[600] text-[24px] leading-[34px] mt-10">
+              <h3
+                className={`text-[#27307D] font-[600] text-[24px] leading-[34px] mt-10 elips-commmon md:before:bottom-[10%] tab:before:left-[38%] md:before:left-[24%] ${
+                  isDesktops ? "elips-serving" : ""
+                } md:before:h-[7px]`}
+              >
                 Our Mission
               </h3>
               <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] md:pr-0 mt-[10px] md:mt-[8px] md:text-[16px] md:leading-[20px]">
@@ -84,7 +84,11 @@ const Home = () => {
               </p>
             </div>
             <div className="basis-[45%]">
-              <h3 className="text-[#27307D] font-[600] text-[24px] leading-[34px] mt-10">
+              <h3
+                className={`text-[#27307D] font-[600] text-[24px] leading-[34px] mt-10 elips-commmon md:before:bottom-[10%] tab:before:left-[38%] md:before:left-[24%] ${
+                  isDesktops ? "elips-serving2" : ""
+                } md:before:h-[7px]`}
+              >
                 Our Vision
               </h3>
               <p className="font-[400] text-[14px] leading-[21px] text-[#696969] pr-[8%] md:pr-0 mt-[10px]  md:mt-[8px] md:text-[16px] md:leading-[20px]">

@@ -96,6 +96,10 @@
 .elips.testimonila-mobile::before { background: url('/public//Images/MobileTestimonial.svg') no-repeat center; }
 .heading-ellipse::before { background: url('/public//Images/CommitmentEllipse.svg') no-repeat center; }
 .heading-ellipse.benifits::before { background: url('/public//Images/BenifitsElips.svg') no-repeat center; }
+.elips-serving::before { background: url('/public//Images/ServingElips.svg') no-repeat center; }
+.elips-serving2::before { background: url('/public//Images/ServingElips2.svg') no-repeat center; }
+.serving-desktop::before { background: url('/public//Images/ServingHeaderElips.svg') no-repeat center; }
+.serving-desktop.serving-mobile::before { background: url('/public//Images/ServingMobileHeadingElips.svg') no-repeat center; }
 
 @tailwind base;
 .wrapper {

@@ -57,13 +57,28 @@ const ContentImage = ({
           <h2
             className={`${
               isHero || children
-                ? "text-[#27307D] font-[700] text-[30px] md:text-[52px] md:leading-[64px] leading-[34px]"
+                ? `text-[#27307D] font-[700] text-[30px] md:text-[52px] md:leading-[64px] leading-[34px] ${
+                    isDesktops && children
+                      ? "serving-desktop elips-commmon md:before:h-[17px] 2xl:bottom-[14%] 2xl:before:left-[50%] 2xl:before:translate-x-[-50%] xl:before:bottom-[20%] md:before:bottom-[10%] md:before:left-[25%] "
+                      : ""
+                  }`
                 : `font-[700] text-[30px] text-center text-white  px-[20%] mb-5 md:text-left md:font-[600] md:text-[32px] md:pl-0 ${
                     title === "Know More" ? "leading-[34px]" : "leading-[42px]"
                   }`
             }`}
           >
-            {heading} {isHero && !isDesktops && <span>Accounting</span>}
+            {heading} {isHero && !isDesktops && <span>Accounting</span>}{" "}
+            {children && !isDesktops ? (
+              <span
+                className={`${
+                  !isDesktops
+                    ? "elips-common serving-desktop serving-mobile before:h-[14px] before:bottom-[10%]"
+                    : ""
+                }`}
+              >
+                we believe in...
+              </span>
+            ) : null}
           </h2>
           <p
             className={`${
