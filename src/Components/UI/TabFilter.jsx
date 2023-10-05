@@ -48,7 +48,7 @@ const TabFilter = () => {
           <h3 className="font-[600] text-[16px] leading-[26px] text-black mb-2 md:text-[32px] md:leading-[34px]">
             {TabFilterData[activeTab].heading}
           </h3>
-          <p className="font-[400] text-[12px] leading-[18px] text-[#696969] mb-4 md:mb-14 md:text-[16px] md:leading-[20px] md:pr-[40%]">
+          <p className="font-[400] text-[12px] leading-[18px] text-[#696969] mb-4 md:mb-20 md:text-[16px] md:leading-[20px] md:pr-[40%]">
             {!isDesktops
               ? TabFilterData[activeTab].description
               : "Ensuring compliance, identifying potential risks and providing invaluable insights to guide your strategic decisions and improve operational efficiency."}
@@ -117,7 +117,7 @@ const TabFilter = () => {
           <a
             href="#FIXME"
             title="Know more"
-            className="font-[600] text-[14px] leading-[21px] text-[#27307D] block text-center mt-2 relative after:absolute  after:content-['\f061'] after:font-['FontAwesome'] after:ml-3 md:text-left md:text-[16px]"
+            className="font-[600] text-[14px] leading-[21px] text-[#27307D] block text-center mt-2 relative after:absolute  after:content-['\f061'] after:font-['FontAwesome'] after:ml-3 md:text-left md:text-[16px] md:mt-[25px]"
           >
             Know more
           </a>
