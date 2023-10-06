@@ -19,7 +19,7 @@ const ContentImage = ({
           ? "relative hero-image-one py-[40px] md:pt-[50px] tab:pt-[65px] md:pb-[100px] md:overflow-hidden"
           : children
           ? "bg-[#2929670D] py-[100px] md:pt-[100px] md:pb-[70px] relative"
-          : `bg-cover bg-no-repeat opacity-[55%] ${
+          : `bg-cover bg-no-repeat ${
               isDesktops ? "background desktop-bg" : "background"
             } ${title === "Know More" ? "py-8" : "pt-[32px] md:pb-0"}`
       } `}

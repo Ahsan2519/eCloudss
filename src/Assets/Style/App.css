@@ -45,7 +45,7 @@
 }
 
 .background {
-  background-image: url('/public//Images/About.svg'), linear-gradient(to bottom, #0C4CE4, #27307D);
+  background: url('/public//Images/About.svg') , #27307D; 
   background-blend-mode: overlay
 }
 
@@ -90,7 +90,7 @@
 .tab-desk-icon::before { background: url('/public//Images/Tab1Back.svg') no-repeat center; }
 .tab-filter2::before { background: url('/public//Images/TabIcon2.svg') no-repeat center; }
 .tab-filter3::before { background: url('/public//Images/TabIcon3.svg') no-repeat center; }
-.background.desktop-bg { background: url('/public//Images/DesktopBg.svg') , linear-gradient(to bottom, #0C4CE4, #27307D); }
+.background.desktop-bg { background: url('/public//Images/DesktopBg.svg') , #27307D; }
 .nav-list .active::before { background: url('/public//Images/EllipseNav.svg') no-repeat center; }
 .elips::before { background: url('/public//Images/TestimonialEllipse.svg') no-repeat center; }
 .elips.testimonila-mobile::before { background: url('/public//Images/MobileTestimonial.svg') no-repeat center; }

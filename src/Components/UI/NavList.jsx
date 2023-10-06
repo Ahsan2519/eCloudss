@@ -1,6 +1,5 @@
 import React from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import Footer from "../Footer";
+import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const NavList = ({ isFooter, toggleHandler, isOpen }) => {

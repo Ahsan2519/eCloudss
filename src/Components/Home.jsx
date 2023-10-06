@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Counter from "./UI/Counter";
 import ContentImage from "./UI/ContentImage";
 import { useDispatch, useSelector } from "react-redux";
