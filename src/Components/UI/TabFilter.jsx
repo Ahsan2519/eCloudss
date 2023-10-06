@@ -56,7 +56,7 @@ const TabFilter = () => {
               ? TabFilterData[activeTab].description
               : "Ensuring compliance, identifying potential risks and providing invaluable insights to guide your strategic decisions and improve operational efficiency."}
           </p>
-          <ul className="flex flex-col md:flex-row md:justify-between  md:mr-[40%] medium:w-[75%]  tab:w-[90%] md:w-full">
+          <ul className="flex flex-col md:flex-row md:justify-between  md:mr-[40%] medium:w-[79%]  tab:w-[90%] md:w-full">
             <li
               className={`text-center bg-[#E9EAF2] mb-3 py-[34px] rounded-[16px] font-[500] text-[16px] leading-[21px] text-black ${
                 isDesktops ? " " : "tab-filter1"
@@ -74,7 +74,7 @@ const TabFilter = () => {
                       alt="Schedule Your Consultation"
                     />
                   </figure>
-                  <span>Charting the Meeting</span>
+                  <span className="md:block md:ml-[7%]">Charting the Meeting</span>
                 </>
               )}
             </li>
