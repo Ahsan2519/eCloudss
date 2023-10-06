@@ -54,7 +54,7 @@ const Nav = () => {
                     href="#FIXME"
                     title="Twiter"
                     target="_blank"
-                    className="icon-common before:content-['\f099'] lg:hover:before:text-[#696969] transition-all ease-in-out duration-[.5s] "
+                    className="icon-common before:content-['\f099'] lg:hover:before:scale-[1.2] transition-all ease-in-out duration-[.5s] "
                   >
                     Twitter
                   </a>
@@ -64,7 +64,7 @@ const Nav = () => {
                     href="#FIXME"
                     title="Facebook"
                     target="_blank"
-                    className="icon-common before:content-['\f39e'] lg:hover:before:text-[#696969] transition-all ease-in-out duration-[.5s]"
+                    className="icon-common before:content-['\f39e'] lg:hover:before:scale-[1.2] transition-all ease-in-out duration-[.5s]"
                   >
                     Facebook
                   </a>
@@ -74,7 +74,7 @@ const Nav = () => {
                     href="#FIXME"
                     title="Instagram"
                     target="_blank"
-                    className="icon-common instagram before:content-[''] lg:hover:before:text-[#696969] transition-all ease-in-out duration-[.5s]"
+                    className="icon-common instagram before:content-[''] lg:hover:before:scale-[1.2] transition-all ease-in-out duration-[.5s]"
                   >
                     Instagram
                   </a>
