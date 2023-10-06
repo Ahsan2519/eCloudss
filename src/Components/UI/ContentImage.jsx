@@ -25,8 +25,8 @@ const ContentImage = ({
       } `}
     >
       {isDesktops && isHero && (
-        <figure className="absolute top-0 hero-image-two z-[-1]">
-          <img src="Images/BgTwo.svg" alt="Hero Image" />
+        <figure className="absolute top-0 hero-image-two z-[-1] w-full">
+          <img src="Images/BgTwo.svg" alt="Hero Image" className="w-full" />
         </figure>
       )}
 
