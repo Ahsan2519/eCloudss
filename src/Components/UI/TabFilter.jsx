@@ -117,7 +117,7 @@ const TabFilter = () => {
           <a
             href="#FIXME"
             title="Know more"
-            className="font-[600] text-[14px] leading-[21px] text-[#27307D] block text-center mt-2 relative after:absolute  after:content-['\f061'] after:font-['FontAwesome'] after:ml-3 md:text-left md:text-[16px] md:mt-[25px]"
+            className="font-[600] text-[14px] leading-[21px] text-[#27307D] block text-center mt-2 relative after:absolute  after:content-['\f061'] after:font-['FontAwesome'] after:ml-3 md:text-left md:text-[16px] md:mt-[25px] transition-all ease-in-out duration-[.5s] lg:hover:opacity-75"
           >
             Know more
           </a>
