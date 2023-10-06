@@ -4,19 +4,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { setActiveTab } from "../../Actions/TabFilterAction";
 
 const TabFilter = () => {
+  // taking activetab from store
   const activeTab = useSelector((state) => state.tabFilter.activeTab);
   const dispatch = useDispatch();
   const isDesktops = useSelector((state) => state.window.isDesktop);
+  // settin animationactive for fed-in-left
   const [animationActive, setAnimationActive] = useState(false);
-
+// function for updating activetab
   const handleTabClick = (index) => {
     dispatch(setActiveTab(index));
     setAnimationActive(true);
   };
-
+// function for applying fed-in-left on each activetab
   const handleAnimationEnd = () => {
     setAnimationActive(false);
   };
+  // updating animationactive on onload
   useEffect(() => {
     setAnimationActive(true);
   }, []);
@@ -26,9 +29,9 @@ const TabFilter = () => {
         {TabFilterData.map((ele, idx) => (
           <li
             key={idx}
-            className={`py-[17px] px-[5%] md:px-[1%] md:flex md:justify-center md:items-center md:flex-col md:shadow-[0px_-35px_50px_0px_rgba(0, 0, 0, 0.08)]  cursor-pointer transition-all ease-in-out duration-[.5s] ${
+            className={`py-[17px] px-[5%] md:px-[1%] md:flex md:justify-center md:items-center md:flex-col cursor-pointer transition-all ease-in-out duration-[.5s] ${
               activeTab === idx
-                ? "bg-white border-[1px] border-[#C9C9D8] border-b-0"
+                ? "bg-white border-[1px] border-[#C9C9D8] border-b-0 shadow-3xl"
                 : ""
             }`}
             onClick={() => handleTabClick(idx)}

@@ -7,6 +7,7 @@ const Nav = () => {
   const [active, setActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const isDesktops = useSelector((state) => state.window.isDesktop);
+  // function for toggle nav and dropdown
   const toggleHandler = (actionName) => {
     if (actionName === "menue") {
       setActive(!active);

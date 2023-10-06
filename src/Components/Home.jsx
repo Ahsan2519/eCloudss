@@ -8,7 +8,9 @@ import TabFilter from "./UI/TabFilter";
 
 const Home = () => {
   const dispatch = useDispatch();
+  // getting index from store for slider
   const index = useSelector((state) => state.slider.index);
+  // getting sliderData from store
   const sliderDetails = useSelector((state) => state.slider.sliderDetails);
   const isDesktops = useSelector((state) => state.window.isDesktop);
 

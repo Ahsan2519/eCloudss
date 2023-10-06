@@ -18,6 +18,9 @@ module.exports = {
         'air': '820px',
         'small' : '376px'
       },
+      boxShadow: {
+        '3xl': '0 -35px 50px 0px rgba(0, 0, 0, 0.08)',
+      }
     },
   },
   plugins: [],
