@@ -141,7 +141,7 @@ const Home = () => {
             <ul
               className={`flex ${
                 isDesktops
-                  ? "justify-between items-stretch w-[88%] gap-[20px] md:flex-wrap tab:flex-nowrap mx-auto [&>*:nth-child(2)]:pt-1  [&>*:nth-child(2)]:pl-[2.5%] [&>*:nth-child(3)]:pt-10 [&>*:nth-child(4)]:pt-4 [&>*:nth-child(4)]:pl-0"
+                  ? "justify-between items-stretch w-[88%] gap-[20px] md:flex-wrap tab:flex-nowrap mx-auto [&>*:nth-child(2)]:pt-1  [&>*:nth-child(2)]:pl-[2.5%] [&>*:nth-child(3)]:pt-10 [&>*:nth-child(4)]:pt-4 [&>*:nth-child(4)]:pl-1"
                   : ""
               }`}
             >

@@ -14,7 +14,9 @@ const Counter = () => {
 
   const dispatch = useDispatch();
 
+  // function for animate counters
   const animateCounters = () => {
+    // setting counter value as per desktop and mobile
     let customerPayload = isDesktops ? 40000 : 136664;
     let experiencePayload = isDesktops ? 50 : 3;
     let projectsPayload = isDesktops ? 25 : 136664;
@@ -75,7 +77,7 @@ const Counter = () => {
             <span className="block counter relative mt-[5px] uppercase md:text-[17px] tab:text-[20px] leading-[24px] md:before:rotate-[90deg] md:before:h-[2px] md:basis-[41%] md:before:left-[2%] medium:before:left-[9%] md:before:top-[47%] md:before:w-[43px] md:px-[5%] medium:pl-[6%] md:text-left">
               {!isDesktops
                 ? "Projects Done"
-                : `Offering services in countries `}
+                : `Offering services in countries`}
             </span>
           </li>
         </ul>

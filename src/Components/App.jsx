@@ -17,11 +17,12 @@ const App = () => {
   const isMobile = useSelector((state) => state.window.windowWidth);
   const [isDesktop, setIsDesktop] = useState(false);
 
+  // setting isDesktop here for desktop styling
   useEffect(() => {
     setIsDesktop(isMobile >= 768 ? true : false);
     dispatch(desktopWidth(isDesktop));
   }, [isMobile, isDesktop]);
-
+// finding isDesktop here for desktop styling
   useEffect(() => {
     const handleResize = () => {
       const newWidth = window.innerWidth;
